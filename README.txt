@@ -52,7 +52,7 @@ Changer le screenshot
 Changer le logo
 
 dans fichiers tpl
-remplacer le nom du theme dans les appels d'includes
+remplacer le nom du theme dans les appels d'includes (inutile avec TWIG)
 <pre>
  <?php
 $theme_path = drupal_get_path('theme', 'starterd6_pf_rwd'); //Nom du thème idem nom du fichier .info

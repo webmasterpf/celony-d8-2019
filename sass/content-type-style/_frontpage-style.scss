@@ -345,8 +345,9 @@ body .conteneur {
         p{
             line-height: 0;
         }
-        div#block-videopresentationdulycee{ //video en page d'accueil'
-                                            text-align: center;
+        iframe{ //video en page d'accueil - centrage
+          display: block;
+          margin: 0 auto;
         }
         ul.rubriques-administratives{
             list-style: none;
