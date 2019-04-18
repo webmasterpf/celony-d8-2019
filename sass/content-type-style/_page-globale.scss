@@ -61,7 +61,7 @@ article.middle-content {
 
 #zone-1.type-page-globale {
   padding: span(0.2) 0;
-  margin: 0;
+  
 
   ul {
     margin: 0;
@@ -72,7 +72,9 @@ article.middle-content {
     margin: 0 0 span(0.2);
     padding: span(0.2) 0;
     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)) {
-      min-width: 95%;
+      li::not(ul.liste-vdl-lycee){
+      min-width: 95%; //non appliqué sur éléments des listes VDL, géré par page-vdl-liste.scss
+      }
     }
 
   }
