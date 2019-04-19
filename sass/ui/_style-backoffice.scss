@@ -67,14 +67,15 @@ body.not-front.logged-in{
 
 /*-- EDIT MODE --D8 --*/
 // Tabs.
-nav.tabs{
-    @include backgroundImage(('BG/bg_nav_backoffice.gif'),0 0, repeat);
+ul.menu,nav.tabs{
+    @include backgroundImage(('BG/bg_nav_backoffice.gif'),transparent,0 0, repeat);
+
     padding:em(5px);
     ul.tabs {
   width: 100%;
   margin: 0 0 em(5px);
   border-bottom: em(1px) solid $gris-clair-moyen;
-
+}
   li {
     display: inline-block;
   }
@@ -86,13 +87,12 @@ nav.tabs{
     border-radius: em(3px) em(3px) 0 0;
     padding: em(3px);
     color: $gris-clair;
-    background: $gris-anthracite;
+    background: $violet;
     text-decoration: none;
     &:hover{
-        color: $gris-anthracite;
-        background: $orange-fonce;
+        color: $gris-clair;
+        background: $vert;
     }
   }
-}
-}
 
+}

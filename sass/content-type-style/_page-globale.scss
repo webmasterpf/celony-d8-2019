@@ -55,13 +55,23 @@ article.middle-content {
       img {
         transform: translate(0%,-6%);
       }
+      // Position différente de l'image selon le nid.
+      &.illustration-nid-133{
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)) {
+          img {
+            transform: translate(0%,-37%);
+          }
+        }
+
+      }
     }
   }
 }
 
+
 #zone-1.type-page-globale {
   padding: span(0.2) 0;
-  
+
 
   ul {
     margin: 0;
