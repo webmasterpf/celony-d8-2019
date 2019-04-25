@@ -62,7 +62,13 @@ article.middle-content {
             transform: translate(0%,-37%);
           }
         }
-
+      }
+      &.illustration-nid-526{ //PAge rubrique lycée
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)) {
+          img {
+            transform: translate(0%,-31%);
+          }
+        }
       }
     }
   }

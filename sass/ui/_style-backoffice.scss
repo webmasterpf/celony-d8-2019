@@ -67,6 +67,7 @@ body.not-front.logged-in{
 
 /*-- EDIT MODE --D8 --*/
 // Tabs.
+body.role--authenticated{
 ul.menu,nav.tabs{
     @include backgroundImage(('BG/bg_nav_backoffice.gif'),transparent,0 0, repeat);
 
@@ -94,5 +95,5 @@ ul.menu,nav.tabs{
         background: $vert;
     }
   }
-
+}
 }
