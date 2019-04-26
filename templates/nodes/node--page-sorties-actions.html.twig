@@ -118,11 +118,7 @@ Permet d'ajouter des classes dynamiques ou non aux éléments du markup
 
       {{ content.body }}
 
-      {% if node.field_inclure_video is not empty %}
-        <aside {{ vuebloc_attribute.addClass(vuebloc_classes) }}>
-          {{ content.field_inclure_video.0 }}
-        </aside>
-      {% endif %}
+      {% include directory ~ '/includes/dedicates_inc/inc_videos_embed.html.twig' %}
 
       {% include directory ~ '/includes/regions_inc/inc_region_zone_1.html.twig' %}
 
