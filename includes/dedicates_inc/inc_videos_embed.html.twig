@@ -28,7 +28,7 @@
 
     <ul>
       {# //Parcourir le tableau field_NAME de l'objet $node pour lister le contenu clé/valeur #}
-      {% for key, video in node.field_inclure_video.value %}
+      {% for key, video in node.field_inclure_video %}
         {# //Ne pas afficher les champs vides du tableau #}
         {% if node.field_inclure_video.value is not empty %}
           <li {{ champ1bis_attribute.addClass(champ1bis_classes) }}>
@@ -38,7 +38,7 @@
       {% endfor %}
 
     </ul>
-    {{ content.field_inclure_video.0 }}
+
     {# / endif pour bloc #}
   </div>
 {% endif %}
