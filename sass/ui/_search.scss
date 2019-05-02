@@ -10,16 +10,34 @@ body.page-search-node{
   margin-left: span(1 wide);//push
   @include clearfix;
   }
+  a.search-help-link{
+    display: none;//On masque l'accès à l'aide.
+  }
+  h2{
+    color: $blanc-casse;
+    background: $vert;
+    @include font-size(l); //utilisation de typey
+  }
   .search-results{
   ol{}
   li{
-    h3.title{
-      color: $vert !important;
+    h3.title {
+      a{
+        color: $vert;
+        @include font-size(l); //utilisation de typey
+        &:hover{
+          color: $violet;
+        }
+      }
+
     }
     .search-snippet-info{
       p.search-snippet{}
       p.search-info{
         font-style: italic;
+      }
+      strong{
+        color: $violet;
       }
     }
   }
