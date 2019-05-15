@@ -437,6 +437,7 @@ body .conteneur {
                 @include breakpoint(($desktop,$desktopwide,$tabletlandscape)){
                     display: flex;
                     flex-flow: row;
+                    flex-wrap: wrap;//pour répartir les items sur plusieurs lignes
                 }
                 @include breakpoint(($mobilelandscape,$tablet)){
                     column-count: 3;
@@ -450,8 +451,9 @@ body .conteneur {
                     @include txt-cesure;
                     @include txt-colonnes;
                     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                        flex: 1 0 25%;
+                        //permet de répartir les items sur plusieurs lignes en fixant une largeur maxi
 
-                        max-width: 25%;
                         @include hack-Edge;
                         @include hack-IE;
                     }
