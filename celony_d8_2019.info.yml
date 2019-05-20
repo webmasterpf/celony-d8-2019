@@ -50,6 +50,7 @@ regions:
   navStatic: 'Navigation statique - Bloc'
   site_slogan: 'Slogan du site - Bloc'
   search_box: 'Zone recherche - Bloc'
+  ariane: 'Zone fil d_ariane (breadcrumb) - Bloc'
   content_bottom: 'Content bottom - Custom'
   content_top: 'Content top - Custom'
   content_top_node: 'Content top node - Custom'
