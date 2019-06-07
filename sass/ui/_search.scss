@@ -10,6 +10,23 @@ body.page-search-node{
   margin-left: span(1 wide);//push
   @include clearfix;
   }
+  ul.pager__items{
+    width: 40%;
+    margin: 0 auto;
+    padding:em(5px);
+    li.pager__item {
+      display: inline-block;
+      a{
+        color: $vert;
+      }
+    }
+    li.pager__item--active{
+      a{
+        color: $violet;
+      }
+      }
+
+  }
   a.search-help-link{
     display: none;//On masque l'accès à l'aide.
   }
