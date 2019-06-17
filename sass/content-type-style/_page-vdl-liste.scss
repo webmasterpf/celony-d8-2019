@@ -101,7 +101,8 @@ body .conteneur {
                         @include hack-IE;
                         @include  txt-colonnes();
                         /* Définir le nombre de colonnes via flex*/
-                        flex: 1 0 17%; // 21% = 4 col , 17% = 5 col
+                        flex: 0 0 18%; // 21% = 4 col , 18% = 5 col
+                        
                         margin: 0 span(0.1) span(0.1) 0;
                         display: inline-block;
                         width: span(1.8);
