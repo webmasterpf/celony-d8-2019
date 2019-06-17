@@ -4,9 +4,9 @@ dependencies:
   module:
     - search
   theme:
-    - starterpf_d8_2019
-id: starterpf_d8_2019_search
-theme: starterpf_d8_2019
+    - celony_d8_2019
+id: celony_d8_2019_search
+theme: celony_d8_2019
 region: sidebar_first
 weight: -1
 provider: null

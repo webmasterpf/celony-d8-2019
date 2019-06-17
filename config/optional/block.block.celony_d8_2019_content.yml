@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - starterpf_d8_2019
-id: starterpf_d8_2019_content
-theme: starterpf_d8_2019
+    - celony_d8_2019
+id: celony_d8_2019_content
+theme: celony_d8_2019
 region: content
 weight: 0
 provider: null
