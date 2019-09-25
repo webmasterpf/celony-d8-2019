@@ -76,7 +76,7 @@ article.middle-content {
 }
 
 #zone-2.type-contenu-actualites {
-  .galerie {
+  .galerie, .videos {
     img {
       @include adaptable-img();
     }
@@ -254,6 +254,15 @@ ______________________________*/
 }
 
 #zone-2.type-contenu-actualites {
+  .videos{
+    ul {
+      li {
+        //suppression des puces
+        list-style-type: none;
+        @include border-vert-violet();
+      }
+    }
+  }
   .galerie {
     img {
       @include transition-hover(75ms);

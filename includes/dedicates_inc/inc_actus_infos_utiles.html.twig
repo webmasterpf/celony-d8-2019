@@ -54,18 +54,27 @@
             <li>{{ content.field_fichier_audio_rp[key] }}</li>
           {% endif %}
         {% endfor %}
-        {#
+
+      </ul>
+    {% endif %}
+    {# Fin Liste fichiers joints #}
+    {#
 -----****** LIENS INTERNET *******-------
 #}
-        {% if node.field_lien_internet_rp.value is not empty %}
-          {# Affichage des étiquettes des champs en tant que titres #}
-          <ul>
-            <li {{ champ3_attribute.addClass(champ3_classes) }}>
-              {{ content.field_lien_internet_rp|field_label }}
+    {% if node.field_lien_internet_rp.value is not empty %}
+      {# Affichage des étiquettes des champs en tant que titres #}
+      <ul>
+        <li {{ champ3_attribute.addClass(champ3_classes) }}>
+          {{ content.field_lien_internet_rp|field_label }}
 
-            </li>
-          </ul>
-        {% endif %}
+        </li>
+      </ul>
+    {% endif %}
+
+    {% if node.field_lien_internet_rp.value is not empty %}
+
+      {# Début Liste liens #}
+      <ul>
         {# //Parcourir le tableau field_NAME de l'objet $node pour lister le contenu clé/valeur #}
         {% for key, lien in node.field_lien_internet_rp %}
           {# //Ne pas afficher les champs vides du tableau #}
@@ -73,9 +82,10 @@
             <li>{{ content.field_lien_internet_rp[key] }}</li>
           {% endif %}
         {% endfor %}
-
       </ul>
     {% endif %}
-    {# / endif pour bloc doc utiles #}
+    {# Fin Liste liens #}
+
   </div>
 {% endif %}
+{# / endif pour bloc doc utiles #}
