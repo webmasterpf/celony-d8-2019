@@ -318,6 +318,7 @@ body .conteneur {
     .HPDiapo{
         a{
             color: white;
+
             font-family: $FontRaleway;
 
             text-decoration: none;
@@ -331,8 +332,12 @@ body .conteneur {
                 display: block;
             }
             .bx-caption{
+                span{
+                  color: $gris-anthracite;//Couleur des Titres
+                }
                 a{
                     @include font-size(m);//utilisation de typey
+                    color: $gris-anthracite;
                     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
                         @include font-size(xl);//utilisation de typey
                     }

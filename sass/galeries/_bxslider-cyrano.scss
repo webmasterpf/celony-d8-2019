@@ -49,7 +49,7 @@ body .conteneur{
             @include backgroundRGBA($vert, 0.85);
             margin: 0 auto;
             span{
-                 color: white;
+                //Régler couleur dans css de FRONTPAGE: _frontpage-style.scss
                 padding: em(5px);
                 font-family: $AristaFont;
                 line-height: 1.3em;

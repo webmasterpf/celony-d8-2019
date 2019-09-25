@@ -311,6 +311,15 @@ $zones: zone-1, zone-2, zone-3;
 @each $zone in $zones {
   @each $type in $typedecontenu {
     ##{$zone}.#{$type} {
+      .videos{
+        ul {
+          li {
+            //suppression des puces
+            list-style-type: none;
+            @include border-vert-violet();
+          }
+        }
+      }
       .galerie {
         img {
           @include transition-hover(75ms);

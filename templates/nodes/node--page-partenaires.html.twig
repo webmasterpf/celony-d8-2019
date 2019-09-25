@@ -128,6 +128,8 @@ Permet d'ajouter des classes dynamiques ou non aux éléments du markup
   <!--______________ZONE 2________________ -->
   <div {{ zone2_attribute.addClass(zone2_classes).setAttribute('id', 'zone-2') }}>
 
+    {% include directory ~ '/includes/dedicates_inc/inc_videos_embed.html.twig' %}
+
     {% if node.field_inserer_liste is not empty %}
       <aside {{ vuebloc_attribute.addClass(vuebloc_classes) }}>
         {{ content.field_inserer_liste.0 }}
