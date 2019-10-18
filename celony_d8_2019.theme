@@ -248,3 +248,10 @@ function celony_d8_2019_theme_registry_alter(&$theme_registry) {
     $theme_registry['item_list__search_results']['variables']['filter'] = '';
   }
 }
+/**
+* Pour changer le type de données dans les flux RSS produits par Views RSS
+* https://www.drupal.org/project/views_rss/issues/589884
+*/
+function celony_d8_2019_template_preprocess_views_view_views_rss_fields(){
+  drupal_set_header('Content-Type: application/rss+xml; charset=utf-8');
+}
