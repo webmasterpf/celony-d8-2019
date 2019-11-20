@@ -68,26 +68,47 @@ body .conteneur {
         }
     }
     aside.liste-actu-presse{
-        .bef-exposed-form{
-            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                column-count: 4;
+      .bef-exposed-form{
+            @include breakpoint(($desktop,$desktopwide)){
+                display:inline-block;
+                column-count: 6;
                 column-fill: balance;
                 white-space: normal;
                 padding: span(0.02);
             }
+            @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
+              //Diminue taille items sur Tablette selon réglage de display
+              //display:inherit;
+              column-count: 1;// Tablette S3: Edge & FF OK
+              column-fill: balance;
+              white-space: normal;
+              padding: span(0.02);
+            }
             div.form-item{
-                margin: 0 0 span(0.01) 0;
-                @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                    @include  txt-colonnes();
-
-                    padding: span(0.35);
-                }
+              margin: 0 0 span(0.01) 0;
+              @include breakpoint(($desktop,$desktopwide)){
+                @include hack-Edge;
+                @include hack-IE;
+                @include txt-colonnes();
+                padding: span(1);
+              }
+              @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
+                @include hack-Edge;
+                @include hack-IE;
+                @include txt-colonnes();
+                //Tri horizontal plutot que vertical des éléments. Besoin d'une largeur
+                // Régler column-count: sur 1 au niveau de l'UL
+                display: inline-block;
+                width: span(5.5);
+                padding: span(0.35);
+                //Garder le margin par défaut
+              }
             }
         }
         .item-list{
-            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                //width: span(12);
-            }
+              @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            // Ne pas utiliser cette classe. Trop générique
+              }
             ul.actu-lycee{
                   @include breakpoint(($desktop,$desktopwide)){
   /*                                        column-count: 5;
