@@ -33,23 +33,33 @@ body .conteneur{
 
 /*######-------- ||| LAYOUT SPECIFIQUE ||| --------######*/
 #zone-illustration.type-page-pole{
-    #illustration-pleinepage{
-        min-height: 35vw;
-        max-height: 90vw;
-        overflow: hidden;
-        position:relative;
-        img{
-            transform: translate(0%,0%);
-            @include adaptable-img();
-        }
-        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-            min-height: 25vw;
-            max-height: 30vw;
-            img{
-                transform: translate(0%,-6%);
-            }
-        }
-    }
+  #illustration-pleinepage{
+      min-height: 35vw;
+      max-height: 90vw;
+      overflow: hidden;
+      position:relative;
+      //image par défaut en BG comme secours
+      //@include backgroundImage(("defaut/visuel-defaut-Actu-2019.jpg"),transparent,no-repeat, top left);
+      //background-size: cover;
+      img{
+          transform: translate(0%,0%);
+          @include adaptable-img();
+      }
+      @include breakpoint(($desktop,$desktopwide)){
+          min-height: 25vw;
+          max-height: 30vw;
+          img{
+              transform: translate(0%,-6%);
+          }
+      }
+      @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
+          min-height: 25vw;
+          max-height: 40vw;
+          img{
+              transform: translate(0%,-20%);
+          }
+      }
+  }
 
 }
 #zone-1.type-page-pole{
@@ -63,41 +73,67 @@ body .conteneur{
         }
     }
     aside.liste-formations-initiales{
-        .bef-exposed-form{
-            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                column-count: 4;
-                column-fill: balance;
-                white-space: normal;
-                padding: span(0.02);
+      .bef-exposed-form{
+        @include breakpoint(($desktop,$desktopwide)){
+            display:inline-block;
+            column-count: 6;
+            column-fill: balance;
+            white-space: normal;
+            padding: span(0.02);
+        }
+        @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
+          //Diminue taille items sur Tablette selon réglage de display
+          //display:inherit;
+          column-count: 1;// Tablette S3: Edge & FF OK
+          column-fill: balance;
+          white-space: normal;
+          padding: span(0.02);
+        }
+        div.form-item{
+            margin: 0 0 span(0.01) 0;
+            @include breakpoint(($desktop,$desktopwide)){
+              @include hack-Edge;
+              @include hack-IE;
+              @include txt-colonnes();
+              padding: span(1);
             }
-            div.form-item{
-                margin: 0 0 span(0.01) 0;
-                @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                    @include  txt-colonnes();//Pour bug webkit avec box shadow et columns - aléatoire
-
-                    padding: span(0.35);
-                }
+            @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
+              @include hack-Edge;
+              @include hack-IE;
+              @include txt-colonnes();
+              //Tri horizontal plutot que vertical des éléments. Besoin d'une largeur
+              // Régler column-count: sur 1 au niveau de l'UL
+              display: inline-block;
+              width: span(5.5);
+              padding: span(0.35);
+              //Garder le margin par défaut
             }
         }
+    }
         ul.formations-initiales{
             padding: 0;
-            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            @include breakpoint(($tablet-hd,$tablet)){
+              //Layout différent pour tablette, 2 colonnes
+              column-count: 2;//adapter selon taille des blocs / images
+              column-fill: balance;//bug FF en colonne résolu
+              white-space: normal;
+              padding: span(0.1);
+            }
+            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tabletlandscape)){
                 column-count: 4;//adapter selon taille des blocs / images
-                column-fill: auto;
+                column-fill: balance;//bug FF en colonne résolu
                 white-space: normal;
                 padding: span(0.1);
             }
             li{
-                padding: 0;
-                margin: span(0.1) 0;
-                overflow: hidden;
-                @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-
-                    @include hack-Edge;
-                    @include hack-IE;
-
-                @include  txt-colonnes();
-                    margin: 0 0 span(0.1) 0;
+              padding: 0;
+              margin: span(0.1) 0;
+              overflow: hidden;
+              @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+              @include hack-Edge;
+              @include hack-IE;
+              @include txt-colonnes();
+              margin: 0 0 span(0.1) 0;
 
                     :not(img):not(a):not(.complement){
                         /*padding: span(0.1);*/
