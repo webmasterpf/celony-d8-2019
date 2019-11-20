@@ -166,7 +166,11 @@ ul.rubriques-speciales{
             margin-left: span(3.05 wide);//push - si 4 items alors 2; si 3 items alors 3.5
         }
         @include breakpoint($tablet){
-            margin: span(0.5) span(0.2);
+          display:inline-block;
+          column-count: 3;//Selon nombre éléments à afficher
+          column-fill: balance;
+          white-space: normal;
+          margin-left: span(2 wide);//centrage des boutons sur tablette portrait
         }
         @include breakpoint(($mobilelandscape,$tabletlandscape)){
             display:inline-block;
@@ -177,7 +181,7 @@ ul.rubriques-speciales{
             margin: 0 10vw;
             max-width: 95%;
         }
-        @include breakpoint(($tablet,$mobile-galaxyShd,$mobile-iphonehd)){
+        @include breakpoint(($mobile-galaxyShd,$mobile-iphonehd)){
             display:inline-block;
             column-count: 1;
             column-fill: balance;
