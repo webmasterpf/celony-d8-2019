@@ -81,7 +81,7 @@ body .conteneur{
             white-space: normal;
             padding: span(0.02);
         }
-        @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
+        @include breakpoint(($mobilelandscape,$tablet)){
           //Diminue taille items sur Tablette selon réglage de display
           //display:inherit;
           column-count: 1;// Tablette S3: Edge & FF OK
@@ -89,18 +89,25 @@ body .conteneur{
           white-space: normal;
           padding: span(0.02);
         }
+        @include breakpoint(($tabletlandscape)){
+          display:inline-block;
+          column-count: 3;
+          column-fill: balance;
+          white-space: normal;
+          padding: span(0.02);
+        }
         div.form-item{
             margin: 0 0 span(0.01) 0;
-            @include breakpoint(($desktop,$desktopwide)){
+            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+              //Règles communes
               @include hack-Edge;
               @include hack-IE;
               @include txt-colonnes();
+            }
+            @include breakpoint(($desktop,$desktopwide)){
               padding: span(1);
             }
             @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
-              @include hack-Edge;
-              @include hack-IE;
-              @include txt-colonnes();
               //Tri horizontal plutot que vertical des éléments. Besoin d'une largeur
               // Régler column-count: sur 1 au niveau de l'UL
               display: inline-block;
@@ -112,19 +119,20 @@ body .conteneur{
     }
         ul.formations-initiales{
             padding: 0;
-            @include breakpoint(($tablet-hd,$tablet)){
+            @include breakpoint(($tablet-hd,$tablet,$mobilelandscape,$tabletlandscape)){
               //Layout différent pour tablette, 2 colonnes
               column-count: 2;//adapter selon taille des blocs / images
               column-fill: balance;//bug FF en colonne résolu
               white-space: normal;
               padding: span(0.1);
             }
-            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tabletlandscape)){
+            @include breakpoint(($desktop,$desktopwide)){
                 column-count: 4;//adapter selon taille des blocs / images
                 column-fill: balance;//bug FF en colonne résolu
                 white-space: normal;
                 padding: span(0.1);
             }
+
             li{
               padding: 0;
               margin: span(0.1) 0;
@@ -150,9 +158,18 @@ body .conteneur{
                     }
                     span.complement{}
                 }
+                @include breakpoint(($tabletlandscape)){
+                  span.illustration {
+                    img{
+                      //Pour éviter vide autour image sur écran HD comme TabS3
+                      transform: scale(1.1);
+                    }
+                  }
+                }
                 a{
                     display: block;
                 }
+
             }
         }
     }
