@@ -31,7 +31,7 @@ body .conteneur {
 }
 /*######-------- ||| LAYOUT SPECIFIQUE ||| --------######*/
 #zone-illustration.type-page-actualites{
-    #illustration-pleinepage{
+  #illustration-pleinepage{
         min-height: 35vw;
         max-height: 90vw;
         overflow: hidden;
@@ -40,11 +40,18 @@ body .conteneur {
             transform: translate(0%,0%);
             @include adaptable-img();
         }
-        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+        @include breakpoint(($desktop,$desktopwide)){
             min-height: 25vw;
             max-height: 30vw;
             img{
                 transform: translate(0%,-6%);
+            }
+        }
+        @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
+            min-height: 25vw;
+            max-height: 37vw;
+            img{
+                transform: translate(0%,-13%);
             }
         }
     }
@@ -79,43 +86,85 @@ body .conteneur {
         }
         .item-list{
             @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                width: span(12);
+                //width: span(12);
             }
             ul.actu-lycee{
-                @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                    /*                    column-count: 6;
-                                        column-fill: auto;
-                                        white-space: normal;*/
-                    //Flex pour avoir classement horizontal
+                  @include breakpoint(($desktop,$desktopwide)){
+  /*                                        column-count: 5;
+                                          column-fill: auto;
+                                          white-space: normal;*/
+                      //Flex pour avoir classement horizontal chronologique plutot que vertical
+                      display: flex;
+                      flex-wrap:wrap;
+                      padding: 0 0 0 span(0.1);
+                  }
+                  @include breakpoint(($tablet-hd,$tablet)){
+                    //Layout différent pour tablette, 2 colonnes
+                    column-count: 1;//adapter selon taille des blocs / images
+                    column-fill: balance;//bug FF en colonne résolu
+                    white-space: normal;
+                    padding: span(0.1);
+
+                  }
+                  @include breakpoint(($mobilelandscape,$tabletlandscape)){
                     display: flex;
                     flex-wrap:wrap;
-                    padding: 0 0 0 span(0.1);
-                }
-                li{
                     padding: 0;
-                    margin: span(0.1) 0;
-                    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                  }
+                  li{
+                      padding: 0;
+                      margin: span(0.1) 0;
+                      :not(img):not(a):not(.complement){
+                          padding: span(0.05);
+                        }
+                      @include breakpoint(($desktop,$desktopwide)){
+
+                          /*@include hack-Edge;*/
+                          @include hack-IE;
+                          @include  txt-colonnes();
                           /* Définir le nombre de colonnes via flex*/
-                        flex: 0 0 18%; // 21% = 4 col , 18% = 5 col
-                        /*@include hack-Edge;*/
+                          flex: 0 0 18%; // 21% = 4 col , 18% = 5 col
+
+                          margin: 0 span(0.1) span(0.1) 0;
+                          display: inline-block;
+                          width: span(1.8);
+                          :not(img):not(a):not(.complement){
+                              padding: span(0.1);
+                            }
+
+                      }
+                      @include breakpoint(($mobilelandscape,$tabletlandscape)){
+                        /* Définir le nombre de colonnes via flex*/
+                        /* Trois valeurs : flex-grow | flex-shrink | flex-basis */
+                        flex: 0 0 30%; // 21% = 4 col , 18% = 5 col - nb item selon taille image
                         @include hack-IE;
                         @include  txt-colonnes();
                         margin: 0 span(0.1) span(0.1) 0;
                         display: inline-block;
-                        width: span(1.8);
+                        //width: span(0.5); //inutile sur tablette S3
 
                         :not(img):not(a):not(.complement){
                             padding: span(0.1);
+                          }
+                      }
+                      @include breakpoint(($tablet-hd,$tablet)){
+                        //Utilisation de colonnes plutot que Flex
+                      @include hack-Edge;
+                      @include hack-IE;
+                      @include txt-colonnes();
 
-                        }
-
-                    }
-                    a{
-                        display: block;
-                        overflow: hidden;// Pour empêcher image de sortir
-                    }
-                }
-            }
+                      //Tri horizontal plutot que vertical des éléments. Besoin d'une largeur
+                      // Régler column-count: sur 1 au niveau de l'UL - Validé Edge et FF TabS3
+                      display: inline-block;
+                      width: span(5.5);
+                      margin: span(0.01);
+                      }
+                      a{
+                          display: block;
+                          overflow: hidden;// Pour empêcher image de sortir
+                      }
+                  }
+            }//Fin UL Actu Lycée
         }
       footer{//Lien vers archives contenu dans le footer de la vue
         width: span(5);
