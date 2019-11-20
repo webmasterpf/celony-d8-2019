@@ -13,7 +13,7 @@ $theme_name = \Drupal::theme()->getActiveTheme()->getName();
 /**
  * Implements hook_form_system_theme_settings_alter().
  *
- * Form override for theme settings.
+ * Form override for theme settings.template_preprocess_views_view_views_rss_fields
  */
 function celony_d8_2019_form_system_theme_settings_alter(array &$form, FormStateInterface $form_state) {
   /*
