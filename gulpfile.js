@@ -52,18 +52,18 @@ var assetsPath = {
   gems: [
 //    basePaths.gems + 'susy-2.2.2/sass',
     basePaths.gems + 'breakpoint-2.7.1/stylesheets'
-    
-    
+
+
   ],
    node_modules: [
-       //Ajoutés avec les gems pour simplifier     
-    basePaths.node_modules +  'node-normalize-scss',       
+       //Ajoutés avec les gems pour simplifier
+    basePaths.node_modules +  'node-normalize-scss',
     basePaths.node_modules +  'susy/sass',
     basePaths.node_modules +  'typey/stylesheets/_typey.scss'
   ],
   javascript: [
-    
-       
+
+
   ]
 };
 // Requis
@@ -105,9 +105,9 @@ var processors = [
                                 browsers: AUTOPREFIXER_BROWSERS,
                                 cascade: false,
                                 //activation du prefixage pour grid
-                                grid: true 
+                                grid: true
                             })
-                            
+
 //  cssnext,
 //  precss
 ];
@@ -133,8 +133,8 @@ var aliasDrush = ['@vmdevd8ce'];
 // #############################
 // Tâches à accomplir - Tasks
 // #############################
-// 
-// 
+//
+//
 gulp.task('sasscompil', function () {
     return gulp.src(basePaths.src)
 //    return gulp.src('./sass/**/*.scss')
@@ -173,10 +173,10 @@ gulp.task('drush', function() {
   return gulp.src(basePaths.drushscript, {
       read: false
     })
-    
+
     .pipe(plugins.shell([
       'drush @vmdevd6pf cron && drush @vmdevd6pf cc all'
-      
+
     ]))
     .pipe(plugins.notify({
       title: "Vidage de Cache",
@@ -185,9 +185,8 @@ gulp.task('drush', function() {
     }));
 });
 
-
-//Initialisation de la tâche de browser-sync
-gulp.task('browser-sync', function() {
+//Initialisation de la tâche de browser-sync - MAJ 2019-11
+gulp.task('browser-sync',  ['sasscompil'], function() {
 browserSync.init({
         //changer l'adresse du site pour lequel utiliser browserSync, solution par variable fonctionne pas
 //        proxy: '.urlSite.',
@@ -196,19 +195,20 @@ browserSync.init({
         logLevel: 'info',//pour avoir toutes les infos ,utiliser "debug", pour infos de base "info"
         logConnections: true
     });
+
+
+           gulp.watch("./public/*.php").on('change', bs_reload);
+           gulp.watch(basePaths.src, ['sasscompil']);
+           gulp.watch(folderPaths.styles.src).on('change', bs_reload);
+           gulp.watch(folderPaths.templates.d8).on('change', bs_reload);
+         //  gulp.watch(folderPaths.templates.d6nodestpl).on('change', bs_reload);
+           gulp.watch(folderPaths.settings.d8).on('change', bs_reload);
+           gulp.watch(folderPaths.js.jsd68).on('change', bs_reload);
+           gulp.watch(folderPaths.ymlsettings.d8yml).on('change', bs_reload);
+         //  gulp.watch(basePaths.src, ['drush']);
+         //  gulp.watch(folderPaths.templates.d6, ['drush']);
+         //  gulp.watch(folderPaths.js.jsd68, ['drush']);
 });
 
-//Tâche de surveillance et d'automatisation
-gulp.task('default', ['browser-sync'], function(){
-//    gulp.task('default', function(){
-  gulp.watch(basePaths.src, ['sasscompil']);
-  gulp.watch(folderPaths.styles.src, bs_reload);
-  gulp.watch(folderPaths.templates.d8, bs_reload);
-//  gulp.watch(folderPaths.templates.d6nodestpl, bs_reload);
-  gulp.watch(folderPaths.settings.d8, bs_reload);
-  gulp.watch(folderPaths.js.jsd68, bs_reload);
-  gulp.watch(folderPaths.ymlsettings.d8yml, bs_reload);
-//  gulp.watch(basePaths.src, ['drush']);
-//  gulp.watch(folderPaths.templates.d6, ['drush']);
-//  gulp.watch(folderPaths.js.jsd68, ['drush']);
-});
+//Tâche de surveillance et d'automatisation - MAJ 2019-11
+gulp.task('default', ['sasscompil',  'browser-sync']);
