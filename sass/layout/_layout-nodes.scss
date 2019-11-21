@@ -22,14 +22,17 @@ body .conteneur{
                 display: block;
                 clear: both;
 
-            } 
+            }
         }
     }
     .zone_layout_max_centre{
-        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+        @include breakpoint(($desktop,$desktopwide)){
          width: span(10 of $desktopcol);
         margin-left: span(1 wide);//push
         @include clearfix;
+        }
+        @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
+        margin: 0;
         }
     }
 }
@@ -58,7 +61,7 @@ body .conteneur{
         display: list-item;
         margin: span(2) 0 0;
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-            width: span(12 of $desktopcol);
+            //width: span(12 of $desktopcol);
             display: inherit;
         margin: 0;
             /*@include clearfixsusy3;*/
@@ -66,15 +69,15 @@ body .conteneur{
         }
     }
     .zone1_layout_9_3{
-        
+
         @include breakpoint(($desktop)){
             width: span(9 of $desktopcol);
             float:left;
-            
+
         }
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-        
-            
+
+
         }
     }
     .zone2_layout_9_3{
@@ -86,15 +89,15 @@ body .conteneur{
     }
     //Variante de largeur de colonnes différentes
         .zone1_layout_8_4{
-        
+
         @include breakpoint(($desktop)){
             width: span(8 of $desktopcol);
             float:left;
-            
+
         }
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-        
-            
+
+
         }
     }
     .zone2_layout_8_4{
@@ -104,18 +107,18 @@ body .conteneur{
             float:left;
         }
     }
-    
+
     //Partie fixe
     .acces_rubriques{
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             @include clearfix;
             display: grid;
-          
+
         }
     }
 
     .acces-contact
-    {        
+    {
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
 /*                 @include clearfix;
                  display: grid;*/
@@ -175,7 +178,7 @@ body .conteneur{
             float:left;
         }
     }
-    
+
     /*---  2 ZONES EGALES - FICHE FORMATION ---*/
     .zone1_layout_6_6{
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
@@ -192,6 +195,6 @@ body .conteneur{
         }
     }
 
-    
-    
+
+
 }
