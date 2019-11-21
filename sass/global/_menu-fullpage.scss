@@ -23,19 +23,24 @@ body .conteneur{
         display: block;
         float: right;
         margin: 0 0 10% 0;
-        top: 0;
-        left: -10%;
+        top: em(35px);
+        left: 0%;
         bottom: 0;
         text-decoration: none;
-        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-            padding: em(9px);
+        //Position du logo du menu
+        @include breakpoint(($desktop,$desktopwide)){
+        padding: em(9px);
         height: em(32px);
         width: em(32px);
         margin: 1%;
         top: em(0px);
         left: em(0px);
         }
-        
+        @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
+        top: em(30px);
+        left: em(-70px);
+        }
+
         div.hamburger{
             &::before{
                 //Ajout d'une indication sur présence du menu
@@ -45,15 +50,19 @@ body .conteneur{
                 font-family: $FontRaleway;
                     left: -4em;
                     top:0.9em;
-    position: relative;
-    text-decoration: none;
-    min-width: 4em;
-    display: block;
-     transition:0.5s all;
+                    position: relative;
+                    text-decoration: none;
+                    min-width: 4em;
+                    display: block;
+                    transition:0.5s all;
+                    //Position de l'indication du menu
                 @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
                     top:0.35em;
                 }
-                
+                @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
+                    top:em(15px);
+                }
+
             }
         }
     }
@@ -89,7 +98,7 @@ body .conteneur{
                 width: 100%;
                     text-transform: uppercase;
                 @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                    font-size: xx-large;
+                    @include font-size(xl);//utilisation de typey
                 }
                 &:hover{
                     color: $gris-anthracite;
@@ -136,6 +145,6 @@ body .conteneur{
 
     .bottom-menu {
         top: em(21px);
-   
+
     }
 }
