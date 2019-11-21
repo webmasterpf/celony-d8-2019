@@ -110,28 +110,26 @@ body .conteneur {
             // Ne pas utiliser cette classe. Trop générique
               }
             ul.actu-lycee{
-                  @include breakpoint(($desktop,$desktopwide)){
-  /*                                        column-count: 5;
-                                          column-fill: auto;
-                                          white-space: normal;*/
-                      //Flex pour avoir classement horizontal chronologique plutot que vertical
-                      display: flex;
-                      flex-wrap:wrap;
-                      padding: 0 0 0 span(0.1);
-                  }
-                  @include breakpoint(($tablet-hd,$tablet)){
-                    //Layout différent pour tablette, 2 colonnes
-                    column-count: 1;//adapter selon taille des blocs / images
-                    column-fill: balance;//bug FF en colonne résolu
-                    white-space: normal;
-                    padding: span(0.1);
+              @include breakpoint(($desktop,$desktopwide)){
+                  //Flex pour avoir classement horizontal chronologique plutot que vertical
+                  display: flex;
+                  flex-wrap:wrap;
+                  padding: 0 0 0 span(0.1);
+              }
+              @include breakpoint(($tablet-hd,$tablet)){
+                //Layout différent pour tablette, 2 colonnes
+                column-count: 1;//adapter selon taille des blocs / images
+                column-fill: balance;//bug FF en colonne résolu
+                white-space: normal;
+                padding: span(0.1);
 
-                  }
-                  @include breakpoint(($mobilelandscape,$tabletlandscape)){
-                    display: flex;
-                    flex-wrap:wrap;
-                    padding: 0;
-                  }
+              }
+              @include breakpoint(($mobilelandscape,$tabletlandscape)){
+                display: flex;
+                flex-wrap:wrap;
+                padding: 0;
+                margin: 0 0 0 em(30px);
+              }
                   li{
                       padding: 0;
                       margin: span(0.1) 0;
@@ -157,7 +155,7 @@ body .conteneur {
                       @include breakpoint(($mobilelandscape,$tabletlandscape)){
                         /* Définir le nombre de colonnes via flex*/
                         /* Trois valeurs : flex-grow | flex-shrink | flex-basis */
-                        flex: 0 0 30%; // 21% = 4 col , 18% = 5 col - nb item selon taille image
+                        flex: 0 0 45%; // 21% = 4 col , 18% = 5 col - nb item selon taille image
                         @include hack-IE;
                         @include  txt-colonnes();
                         margin: 0 span(0.1) span(0.1) 0;
@@ -368,12 +366,14 @@ ______________________________*/
                                     }*/
 
                 span.illus-actu {
-                    img{
-                        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
-                        transform: translate(-17% );
-                         }
-
-                    }
+                  img {
+                       @include breakpoint(($desktop,$desktopwide)){
+                      transform: translate(-17% );
+                       }
+                       @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
+                        transform: translate(0%) scale(1.2);
+                       }
+                  }
                     >a {//uniquement les "a" sur l'image
                         position:relative;//pour overlay image
                         &:before{
