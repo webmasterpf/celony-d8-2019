@@ -164,7 +164,9 @@ article.middle-content {
           }
         }
         @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)) {
-            //Pas de réglages ici
+          img {
+            transform: scale(1.05);
+          }
         }
       }
 
