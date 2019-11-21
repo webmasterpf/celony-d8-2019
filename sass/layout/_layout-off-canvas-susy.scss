@@ -31,7 +31,7 @@ body .conteneur {
         background: $vert;//changer couleur selon le site !!!
         @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
         //Hauteur de la zone contenant le bouton de fermeture de l'onglet
-        height: span(0.15);
+        height: span(0.22);
         }
     }
     img.close-btn{
