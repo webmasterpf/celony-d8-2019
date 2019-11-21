@@ -11,10 +11,15 @@ body .conteneur #header {
         width: span(10 of $desktopcol);
         margin-left: span(1 wide);//push
     }
+    @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
+        z-index : 30;
+        width: auto;
+        margin-left: 0;
+    }
     &:after{
         content: " ";
         display: block;
-        clear: both;}  
+        clear: both;}
     .headHaut {
 
         @include clearfixsusy3;//Dispo sur tous supports
@@ -26,9 +31,9 @@ body .conteneur #header {
             }
             img{
                 margin: 0 auto;
-                width: 100%;
+                @include adaptable-img();
                 @include breakpoint(($mobile,$mobilelandscape)){           }
-                @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){    
+                @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
                     width: 100%;
                     margin: 0;
                     padding: 0;
@@ -42,25 +47,28 @@ body .conteneur #header {
         }
         nav.menuOver{
     margin: 0 span(0.3) 0 0;
-    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){           
+    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
         margin: 0;
     }
-}  
+}
     }
 }
 
-               
+
 
 
 .headBas {
-    /*width: span(4 of $mobilecol);*/
+
     @include clearfixsusy3;//Dispo sur tous supports
+    @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
+        margin: 0 0 em(10px) 0;
+      }
     .site-slogan,.objectif{
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             padding: em(5px) 0 0 0 //Ajoute un padding pour positionner boite
         }
     }
-    .headSearch{ 
+    .headSearch{
         margin: 0 30%;
         padding: 0;
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
@@ -68,9 +76,15 @@ body .conteneur #header {
             margin: 0 span(0.2);
             float: right;
         }
+        @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
+            padding: em(5px) 0 0 0; //Ajoute un padding pour positionner boite de recherche
+            margin: 0 0 span(0.2) span(4);
+            float: none;
+        }
+
     }
 
-}                
+}
 
 
 
