@@ -30,7 +30,8 @@ Style - layout pour le bandeau des autres sites de l'ASSO
                       }
                     &:hover{
                       color: #FBFBFB;
-                      transition: background 2s ease,color 1000ms ease;-webkit-transition: background 2s ease,color 1000ms ease;}
+                      transition: background 2s ease,color 1000ms ease;
+                    }
                 }
             }
         }
@@ -53,7 +54,8 @@ Style - layout pour le bandeau des autres sites de l'ASSO
                     text-decoration: none;
                     @include font-size(m);//utilisation de typey
                     &:hover{color: #FBFBFB;
-                            transition: background 2s ease,color 1000ms ease;-webkit-transition: background 2s ease,color 1000ms ease;}
+                            transition: background 2s ease,color 1000ms ease;
+                          }
                 }
             }
         }
