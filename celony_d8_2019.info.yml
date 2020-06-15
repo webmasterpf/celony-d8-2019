@@ -12,21 +12,29 @@ libraries-remove:
   - core/modules/system/css/system.module.css
   - core/modules/system/css/system.theme.css
   - core/modules/views/css/views.module.css
+  - celony_d8_2019/npm.enquire
 
 #Liste des librairies à charger (reprise du ficher MON_THEME.libraries.yml)
 #Transposition du chargement des CSS ou JS depuis le fichier info du D6
 # https://www.drupal.org/docs/8/theming/adding-stylesheets-css-and-javascript-js-to-a-drupal-8-theme
+libraries-override:
+libraries-extend:
 libraries:
-  #Les fichiers (librairies) de style chargés pour toutes les pages. Utilise une Asset Library (bibliothèque) définie dans
+  # Les fichiers (librairies) de style chargés pour toutes les pages.
+  # Utilise une Asset Library (bibliothèque) définie dans
   # le fichier NOM_THEME.libraries.yml
-  #Les librairies de style
-#  - core/normalize
-  - celony_d8_2019/global-styling
-#  - celony_d8_2019/css
-#  - celony_d8_2019/3rdparty
   #Les librairies de javascript
-#  - celony_d8_2019/js
+  #- celony_d8_2019/js
+  - celony_d8_2019/at.enquire
+  #- celony_d8_2019/npm.enquire
+  #- celony_d8_2019/cdn.jquery
   - celony_d8_2019/global-scripts
+  #Les librairies de style
+  #- core/normalize
+  - celony_d8_2019/global-styling
+  - celony_d8_2019/fonts
+  #- celony_d8_2019/3rdparty
+
 regions:
  #Régions de base - devient {{ page.header }}  dans fichier .twig
  #synthaxe : nom_region: 'Nom Région'
