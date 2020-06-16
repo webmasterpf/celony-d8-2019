@@ -220,7 +220,7 @@ Librairie externes et D8: https://www.drupal.org/project/documentation/issues/26
                //Taille Likebox FB
                $("aside#pageFacebook iframe").height('45vh').width('50vw');
                $("aside.block-videopresentationdulyceefxb iframe").height('95vh').width('60vw');//Video Gde Taille HP
-               $("aside.block-videopresentationdulyceefb iframe").height('95vh').width('60vw');//Video Gde Taille HP pour MG
+               $("aside.block-videopresentationdulyceefb iframe").height('95vh').width('60vw');//Video Gde Taille HP pour MG & CE
 
            	},
            	unmatch : function() {
