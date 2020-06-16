@@ -592,19 +592,19 @@ body .conteneur {
                     }
                     &.nid-23{//contact
                              a:hover{
-                                 @include backgroundImage(('SVG/bg_acces_contact_blanc_transp.svg'),$violet, -9% 58%, no-repeat);
+                                 @include backgroundImage(('SVG/bg_acces_contact_blanc_transp.svg'),$violet, -9% 50%, no-repeat);
                                  background-size: 400%;
                              }
                     }
                     &.nid-21{//inscriptions
                              a:hover{
-                                 @include backgroundImage(('SVG/bg_acces_contact_blanc_transp.svg'),$violet, 71% 58%, no-repeat);
+                                 @include backgroundImage(('SVG/bg_acces_contact_blanc_transp.svg'),$violet, 80% 50%, no-repeat);
                                  background-size: 400%;
                              }
                     }
                     &.nid-39{//actus
                              a:hover{
-                                 @include backgroundImage(('SVG/bg_acces_contact_blanc_transp.svg'),$violet, 108% 58%, no-repeat);
+                                 @include backgroundImage(('SVG/bg_acces_contact_blanc_transp.svg'),$violet, 110% 50%, no-repeat);
                                  background-size: 400%;
                              }
                     }
