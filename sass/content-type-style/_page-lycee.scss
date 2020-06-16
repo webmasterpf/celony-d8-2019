@@ -188,6 +188,15 @@ h1.titre_page {
       strong {
         color: $vert;
       }
+      //Style pour formulaire
+       aside.formulaire{
+
+        input[type="text"],input[type="email"],textarea{
+            background: $vert;
+            color: $blanc-casse;
+            padding: span(0.01);
+        }
+    }
     }
   }
 }
