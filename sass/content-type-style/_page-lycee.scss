@@ -85,11 +85,34 @@ $zonesimg: zone-illustration;
     }
   }
 }
+
 $typedecontenu: type-page-lycee,type-contenu-cdi;
 $zones: zone-1, zone-2, zone-3;
 @each $zone in $zones {
   @each $type in $typedecontenu {
-    ##{$zone}.#{$type} {}
+    ##{$zone}.#{$type} {
+      //Layout pour le formulaire
+    aside.formulaire{
+        @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+            padding: span(0.2);
+        }
+        table,tbody,tr,td,form,input[type="text"],input[type="email"]{
+            width: 95%;
+            margin: 0 auto;
+            @include arrondis(1.5em);
+            @include backgroundImage(("motif_img_overlay.png"),transparent,repeat, top left);
+            @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+                width: 75%;
+                margin: span(0.1) auto; 
+                padding: span(0.1);
+
+            }
+        }
+        textarea{
+            @include arrondis(1em);
+        }
+    }// Fin formulaire
+    }
   }
 }
 /*######-------- ||| BORDURES ||| --------######*/
@@ -431,6 +454,7 @@ ______________________________*/
       padding: span(0.02);
       margin: 0 0 0 span(0.2);
     }
+    
   }
 }
 /*######-------- ZONE 3 --------######*/
