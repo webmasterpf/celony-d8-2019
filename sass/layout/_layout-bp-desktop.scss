@@ -4,7 +4,7 @@ Layout pour les desktop.Breakpoint définit par variable dans _variables.scss
 */
 body .conteneur{
 
-    @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+    @include breakpoint(($desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
 
         padding-top: 0em;
         //mixin container n'existe plus avec susy3, tout se fait avec span
@@ -66,6 +66,15 @@ body .conteneur{
             }
         }
 
+    }
+    @include breakpoint(($desktop)){
+        #footer{
+            p{
+               //Voir fichier typos.scss pour taille ou override ici
+               // Taille plus petite sur petits écrans bureau
+               @include font-size(s);//utilisation de typey
+            }
+        }
     }
 
 }
