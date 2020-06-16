@@ -109,6 +109,13 @@ Permet d'ajouter des classes dynamiques ou non aux éléments du markup
     
   <!--______________ZONE 1________________ -->
   <div {{ zone1_attribute.addClass(zone1_classes).setAttribute('id', 'zone-1') }}>
+
+        {% if node.field_inserer_formulaire is not empty %}
+      <aside {{ vuebloc_attribute.addClass(vuebloc_classes) }}>
+        {{ content.field_inserer_formulaire.0 }}
+      </aside>
+    {% endif %}
+    
   <div{{ content_attributes.addClass('content') }}>
     
     {{ content.body }}
