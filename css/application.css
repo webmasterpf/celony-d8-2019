@@ -11436,6 +11436,12 @@ h1.titre_page {
   color: #ADC91F;
 }
 
+#zone-1.type-page-lycee aside.formulaire input[type="text"], #zone-1.type-page-lycee aside.formulaire input[type="email"], #zone-1.type-page-lycee aside.formulaire textarea {
+  background: #ADC91F;
+  color: #FBFBFB;
+  padding: calc(0.5em + ((100% - 6em) / 12 * 0.01));
+}
+
 #zone-1.type-contenu-cdi li,
 #zone-1.type-contenu-cdi p,
 #zone-1.type-contenu-cdi ul {
@@ -11471,6 +11477,12 @@ h1.titre_page {
 
 #zone-1.type-contenu-cdi strong {
   color: #ADC91F;
+}
+
+#zone-1.type-contenu-cdi aside.formulaire input[type="text"], #zone-1.type-contenu-cdi aside.formulaire input[type="email"], #zone-1.type-contenu-cdi aside.formulaire textarea {
+  background: #ADC91F;
+  color: #FBFBFB;
+  padding: calc(0.5em + ((100% - 6em) / 12 * 0.01));
 }
 
 #zone-2.type-page-lycee li,
@@ -11510,6 +11522,12 @@ h1.titre_page {
   color: #ADC91F;
 }
 
+#zone-2.type-page-lycee aside.formulaire input[type="text"], #zone-2.type-page-lycee aside.formulaire input[type="email"], #zone-2.type-page-lycee aside.formulaire textarea {
+  background: #ADC91F;
+  color: #FBFBFB;
+  padding: calc(0.5em + ((100% - 6em) / 12 * 0.01));
+}
+
 #zone-2.type-contenu-cdi li,
 #zone-2.type-contenu-cdi p,
 #zone-2.type-contenu-cdi ul {
@@ -11545,6 +11563,12 @@ h1.titre_page {
 
 #zone-2.type-contenu-cdi strong {
   color: #ADC91F;
+}
+
+#zone-2.type-contenu-cdi aside.formulaire input[type="text"], #zone-2.type-contenu-cdi aside.formulaire input[type="email"], #zone-2.type-contenu-cdi aside.formulaire textarea {
+  background: #ADC91F;
+  color: #FBFBFB;
+  padding: calc(0.5em + ((100% - 6em) / 12 * 0.01));
 }
 
 #zone-3.type-page-lycee li,
@@ -11584,6 +11608,12 @@ h1.titre_page {
   color: #ADC91F;
 }
 
+#zone-3.type-page-lycee aside.formulaire input[type="text"], #zone-3.type-page-lycee aside.formulaire input[type="email"], #zone-3.type-page-lycee aside.formulaire textarea {
+  background: #ADC91F;
+  color: #FBFBFB;
+  padding: calc(0.5em + ((100% - 6em) / 12 * 0.01));
+}
+
 #zone-3.type-contenu-cdi li,
 #zone-3.type-contenu-cdi p,
 #zone-3.type-contenu-cdi ul {
@@ -11619,6 +11649,12 @@ h1.titre_page {
 
 #zone-3.type-contenu-cdi strong {
   color: #ADC91F;
+}
+
+#zone-3.type-contenu-cdi aside.formulaire input[type="text"], #zone-3.type-contenu-cdi aside.formulaire input[type="email"], #zone-3.type-contenu-cdi aside.formulaire textarea {
+  background: #ADC91F;
+  color: #FBFBFB;
+  padding: calc(0.5em + ((100% - 6em) / 12 * 0.01));
 }
 
 /*------------------------------------
