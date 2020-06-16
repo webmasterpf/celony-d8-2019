@@ -4385,7 +4385,7 @@ body .conteneur .conteneur-flex #zone-3.type-page-pole {
   }
 }
 
-@media only screen and (min-device-width: 319px) and (max-device-width: 765px) and (orientation: landscape), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 96dpi) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 96dpi), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 96dpi) {
   #zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form {
     -webkit-column-count: 1;
             column-count: 1;
@@ -4396,11 +4396,10 @@ body .conteneur .conteneur-flex #zone-3.type-page-pole {
   }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 96dpi) {
+@media only screen and (min-device-width: 319px) and (max-device-width: 765px) and (orientation: landscape) {
   #zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form {
-    display: inline-block;
-    -webkit-column-count: 3;
-            column-count: 3;
+    -webkit-column-count: 2;
+            column-count: 2;
     -webkit-column-fill: balance;
             column-fill: balance;
     white-space: normal;
@@ -4410,9 +4409,11 @@ body .conteneur .conteneur-flex #zone-3.type-page-pole {
 
 #zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item {
   margin: 0 0 calc(0.5em + ((100% - 6em) / 12 * 0.01)) 0;
+  min-height: 7vh;
+  padding: calc(0.5em + ((100% - 6em) / 12 * 0.15));
 }
 
-@media screen and (min-device-width: 1200px), screen and (min-device-width: 1440px) and (-webkit-min-device-pixel-ratio: 1), screen and (min-device-width: 1440px) and (min-resolution: 1dppx), screen and (min-device-width: 1440px) and (min--moz-device-pixel-ratio: 1), screen and (min-device-width: 1440px) and (min-resolution: 96dpi), only screen and (min-device-width: 319px) and (max-device-width: 765px) and (orientation: landscape), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 96dpi), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 96dpi) {
+@media screen and (min-device-width: 1200px), screen and (min-device-width: 1440px) and (-webkit-min-device-pixel-ratio: 1), screen and (min-device-width: 1440px) and (min-resolution: 1dppx), screen and (min-device-width: 1440px) and (min--moz-device-pixel-ratio: 1), screen and (min-device-width: 1440px) and (min-resolution: 96dpi) {
   #zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item {
     -webkit-column-break-inside: avoid;
             break-inside: avoid-column;
@@ -4422,6 +4423,7 @@ body .conteneur .conteneur-flex #zone-3.type-page-pole {
             break-after: avoid-column;
     -webkit-column-break-before: avoid-column;
             break-before: avoid-column;
+    padding: calc(0.5em + ((100% - 6em) / 12 * 1));
   }
   @supports (-ms-ime-align: auto) {
     #zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item {
@@ -4431,24 +4433,68 @@ body .conteneur .conteneur-flex #zone-3.type-page-pole {
   }
 }
 
-@media screen and (min-device-width: 1200px) and (min-width: 0\0), screen and (min-device-width: 1440px) and (-webkit-min-device-pixel-ratio: 1) and (min-width: 0\0), screen and (min-device-width: 1440px) and (min-resolution: 1dppx) and (min-width: 0\0), screen and (min-device-width: 1440px) and (min--moz-device-pixel-ratio: 1) and (min-width: 0\0), screen and (min-device-width: 1440px) and (min-resolution: 96dpi) and (min-width: 0\0), only screen and (min-device-width: 319px) and (max-device-width: 765px) and (orientation: landscape) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 1dppx) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min--moz-device-pixel-ratio: 1) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 96dpi) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 1dppx) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min--moz-device-pixel-ratio: 1) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 96dpi) and (min-width: 0\0) {
+@media screen and (min-device-width: 1200px) and (min-width: 0\0), screen and (min-device-width: 1440px) and (-webkit-min-device-pixel-ratio: 1) and (min-width: 0\0), screen and (min-device-width: 1440px) and (min-resolution: 1dppx) and (min-width: 0\0), screen and (min-device-width: 1440px) and (min--moz-device-pixel-ratio: 1) and (min-width: 0\0), screen and (min-device-width: 1440px) and (min-resolution: 96dpi) and (min-width: 0\0) {
   #zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item {
     display: inline-block;
     width: 100%;
   }
 }
 
-@media screen and (min-device-width: 1200px), screen and (min-device-width: 1440px) and (-webkit-min-device-pixel-ratio: 1), screen and (min-device-width: 1440px) and (min-resolution: 1dppx), screen and (min-device-width: 1440px) and (min--moz-device-pixel-ratio: 1), screen and (min-device-width: 1440px) and (min-resolution: 96dpi) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 96dpi), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 96dpi) {
   #zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item {
-    padding: calc(0.5em + ((100% - 6em) / 12 * 1));
-  }
-}
-
-@media only screen and (min-device-width: 319px) and (max-device-width: 765px) and (orientation: landscape), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 96dpi), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 96dpi) {
-  #zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item {
+    -webkit-column-break-inside: avoid;
+            break-inside: avoid-column;
+    page-break-inside: avoid;
+    /* fix for Firefox */
+    -webkit-column-break-after: avoid-column;
+            break-after: avoid-column;
+    -webkit-column-break-before: avoid-column;
+            break-before: avoid-column;
     display: inline-block;
     width: calc(3em + ((100% - 6em) / 12 * 5.5));
     padding: calc(0.5em + ((100% - 6em) / 12 * 0.35));
+  }
+  @supports (-ms-ime-align: auto) {
+    #zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 1dppx) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min--moz-device-pixel-ratio: 1) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 96dpi) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 1dppx) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min--moz-device-pixel-ratio: 1) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 96dpi) and (min-width: 0\0) {
+  #zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-device-width: 319px) and (max-device-width: 765px) and (orientation: landscape) {
+  #zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item {
+    -webkit-column-break-inside: avoid;
+            break-inside: avoid-column;
+    page-break-inside: avoid;
+    /* fix for Firefox */
+    -webkit-column-break-after: avoid-column;
+            break-after: avoid-column;
+    -webkit-column-break-before: avoid-column;
+            break-before: avoid-column;
+    display: block;
+    min-height: 19vh;
+    padding: calc(0.5em + ((100% - 6em) / 12 * 0.15));
+  }
+  @supports (-ms-ime-align: auto) {
+    #zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 319px) and (max-device-width: 765px) and (orientation: landscape) and (min-width: 0\0) {
+  #zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item {
+    display: inline-block;
+    width: 100%;
   }
 }
 
@@ -4519,8 +4565,8 @@ body .conteneur .conteneur-flex #zone-3.type-page-pole {
     overflow: hidden;
   }
   #zone-1.type-page-pole aside.liste-formations-initiales ul.formations-initiales li span.illustration img {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
   }
   #zone-1.type-page-pole aside.liste-formations-initiales ul.formations-initiales li span.titre-fiche, #zone-1.type-page-pole aside.liste-formations-initiales ul.formations-initiales li span.complement {
     padding: calc(0.5em + ((100% - 6em) / 12 * 0.1));
@@ -4529,13 +4575,50 @@ body .conteneur .conteneur-flex #zone-3.type-page-pole {
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 96dpi) {
   #zone-1.type-page-pole aside.liste-formations-initiales ul.formations-initiales li span.illustration img {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    -webkit-transform: scale(2.1);
+            transform: scale(2.1);
   }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 96dpi) {
+  #zone-1.type-page-pole aside.liste-formations-initiales ul.formations-initiales li span.illustration img {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+}
+
+#zone-1.type-page-pole aside.liste-formations-initiales ul.formations-initiales li span.titre-fiche, #zone-1.type-page-pole aside.liste-formations-initiales ul.formations-initiales li span.complement {
+  padding: calc(0.5em + ((100% - 6em) / 12 * 0.1));
 }
 
 #zone-1.type-page-pole aside.liste-formations-initiales ul.formations-initiales li a {
   display: block;
+}
+
+#zone-1.type-page-pole aside.liste-formations-initiales nav.pager {
+  -webkit-column-span: all;
+          column-span: all;
+}
+
+#zone-1.type-page-pole aside.liste-formations-initiales nav.pager::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#zone-1.type-page-pole aside.liste-formations-initiales nav.pager ul.pager__items {
+  width: calc(2em + ((100% - 6em) / 12 * 4));
+  margin: 0 auto;
+  padding: calc(0.5em + ((100% - 6em) / 12 * 0.1));
+}
+
+#zone-1.type-page-pole aside.liste-formations-initiales nav.pager ul.pager__items li {
+  display: block;
+  float: left;
+}
+
+#zone-1.type-page-pole aside.liste-formations-initiales nav.pager ul.pager__items li:last-child {
+  margin-right: 0;
 }
 
 /*######-------- ||| STYLE ||| --------######*/
@@ -4570,13 +4653,13 @@ ______________________________*/
                         font-family: $FontRaleway;*/
 }
 
-#zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item:hover:not(#edit-term-node-tid-depth-limited-All-wrapper) {
-  background: transparent url("../images/BG/BG_Filtres_Exposes.png") center -8.5em no-repeat;
+#zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item:hover:not(:first-child) {
+  background: transparent url("../images/BG/BG_Filtres_Exposes.png") center -7.5vw no-repeat;
   background-size: 60%;
   background-color: #911381;
 }
 
-#zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item:hover:not(#edit-term-node-tid-depth-limited-All-wrapper) label {
+#zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item:hover:not(:first-child) label {
   opacity: 0.45;
   /*0.6*/
   -moz-opacity: 0.45;
@@ -4650,13 +4733,26 @@ ______________________________*/
 #zone-1.type-page-pole aside.liste-formations-initiales ul.formations-initiales li span.complement {
   font-weight: initial;
   /*we revert back the inherited style*/
+  font-size: 0.875em;
+}
+
+@media screen and (min-device-width: 1200px), screen and (min-device-width: 1440px) and (-webkit-min-device-pixel-ratio: 1), screen and (min-device-width: 1440px) and (min-resolution: 1dppx), screen and (min-device-width: 1440px) and (min--moz-device-pixel-ratio: 1), screen and (min-device-width: 1440px) and (min-resolution: 96dpi), only screen and (min-device-width: 319px) and (max-device-width: 765px) and (orientation: landscape), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 96dpi), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 96dpi) {
+  #zone-1.type-page-pole aside.liste-formations-initiales ul.formations-initiales li span.complement {
+    font-size: 1.4375em;
+  }
 }
 
 #zone-1.type-page-pole aside.liste-formations-initiales ul.formations-initiales li a {
   color: #FBFBFB;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.4375em;
+  font-size: 0.875em;
+}
+
+@media screen and (min-device-width: 1200px), screen and (min-device-width: 1440px) and (-webkit-min-device-pixel-ratio: 1), screen and (min-device-width: 1440px) and (min-resolution: 1dppx), screen and (min-device-width: 1440px) and (min--moz-device-pixel-ratio: 1), screen and (min-device-width: 1440px) and (min-resolution: 96dpi), only screen and (min-device-width: 319px) and (max-device-width: 765px) and (orientation: landscape), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 96dpi), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 96dpi) {
+  #zone-1.type-page-pole aside.liste-formations-initiales ul.formations-initiales li a {
+    font-size: 1.4375em;
+  }
 }
 
 #zone-1.type-page-pole aside.liste-formations-initiales ul.formations-initiales li span.illustration > a {
@@ -10362,7 +10458,7 @@ body .conteneur .conteneur-flex #zone-3.type-page-pole {
   }
 }
 
-@media only screen and (min-device-width: 319px) and (max-device-width: 765px) and (orientation: landscape), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 96dpi) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 96dpi), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 96dpi) {
   #zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form {
     -webkit-column-count: 1;
             column-count: 1;
@@ -10373,11 +10469,10 @@ body .conteneur .conteneur-flex #zone-3.type-page-pole {
   }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 96dpi) {
+@media only screen and (min-device-width: 319px) and (max-device-width: 765px) and (orientation: landscape) {
   #zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form {
-    display: inline-block;
-    -webkit-column-count: 3;
-            column-count: 3;
+    -webkit-column-count: 2;
+            column-count: 2;
     -webkit-column-fill: balance;
             column-fill: balance;
     white-space: normal;
@@ -10387,9 +10482,11 @@ body .conteneur .conteneur-flex #zone-3.type-page-pole {
 
 #zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item {
   margin: 0 0 calc(0.5em + ((100% - 6em) / 12 * 0.01)) 0;
+  min-height: 7vh;
+  padding: calc(0.5em + ((100% - 6em) / 12 * 0.15));
 }
 
-@media screen and (min-device-width: 1200px), screen and (min-device-width: 1440px) and (-webkit-min-device-pixel-ratio: 1), screen and (min-device-width: 1440px) and (min-resolution: 1dppx), screen and (min-device-width: 1440px) and (min--moz-device-pixel-ratio: 1), screen and (min-device-width: 1440px) and (min-resolution: 96dpi), only screen and (min-device-width: 319px) and (max-device-width: 765px) and (orientation: landscape), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 96dpi), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 96dpi) {
+@media screen and (min-device-width: 1200px), screen and (min-device-width: 1440px) and (-webkit-min-device-pixel-ratio: 1), screen and (min-device-width: 1440px) and (min-resolution: 1dppx), screen and (min-device-width: 1440px) and (min--moz-device-pixel-ratio: 1), screen and (min-device-width: 1440px) and (min-resolution: 96dpi) {
   #zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item {
     -webkit-column-break-inside: avoid;
             break-inside: avoid-column;
@@ -10399,6 +10496,7 @@ body .conteneur .conteneur-flex #zone-3.type-page-pole {
             break-after: avoid-column;
     -webkit-column-break-before: avoid-column;
             break-before: avoid-column;
+    padding: calc(0.5em + ((100% - 6em) / 12 * 1));
   }
   @supports (-ms-ime-align: auto) {
     #zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item {
@@ -10408,24 +10506,68 @@ body .conteneur .conteneur-flex #zone-3.type-page-pole {
   }
 }
 
-@media screen and (min-device-width: 1200px) and (min-width: 0\0), screen and (min-device-width: 1440px) and (-webkit-min-device-pixel-ratio: 1) and (min-width: 0\0), screen and (min-device-width: 1440px) and (min-resolution: 1dppx) and (min-width: 0\0), screen and (min-device-width: 1440px) and (min--moz-device-pixel-ratio: 1) and (min-width: 0\0), screen and (min-device-width: 1440px) and (min-resolution: 96dpi) and (min-width: 0\0), only screen and (min-device-width: 319px) and (max-device-width: 765px) and (orientation: landscape) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 1dppx) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min--moz-device-pixel-ratio: 1) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 96dpi) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 1dppx) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min--moz-device-pixel-ratio: 1) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 96dpi) and (min-width: 0\0) {
+@media screen and (min-device-width: 1200px) and (min-width: 0\0), screen and (min-device-width: 1440px) and (-webkit-min-device-pixel-ratio: 1) and (min-width: 0\0), screen and (min-device-width: 1440px) and (min-resolution: 1dppx) and (min-width: 0\0), screen and (min-device-width: 1440px) and (min--moz-device-pixel-ratio: 1) and (min-width: 0\0), screen and (min-device-width: 1440px) and (min-resolution: 96dpi) and (min-width: 0\0) {
   #zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item {
     display: inline-block;
     width: 100%;
   }
 }
 
-@media screen and (min-device-width: 1200px), screen and (min-device-width: 1440px) and (-webkit-min-device-pixel-ratio: 1), screen and (min-device-width: 1440px) and (min-resolution: 1dppx), screen and (min-device-width: 1440px) and (min--moz-device-pixel-ratio: 1), screen and (min-device-width: 1440px) and (min-resolution: 96dpi) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 96dpi), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 96dpi) {
   #zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item {
-    padding: calc(0.5em + ((100% - 6em) / 12 * 1));
-  }
-}
-
-@media only screen and (min-device-width: 319px) and (max-device-width: 765px) and (orientation: landscape), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 96dpi), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 96dpi) {
-  #zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item {
+    -webkit-column-break-inside: avoid;
+            break-inside: avoid-column;
+    page-break-inside: avoid;
+    /* fix for Firefox */
+    -webkit-column-break-after: avoid-column;
+            break-after: avoid-column;
+    -webkit-column-break-before: avoid-column;
+            break-before: avoid-column;
     display: inline-block;
     width: calc(3em + ((100% - 6em) / 12 * 5.5));
     padding: calc(0.5em + ((100% - 6em) / 12 * 0.35));
+  }
+  @supports (-ms-ime-align: auto) {
+    #zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 1dppx) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min--moz-device-pixel-ratio: 1) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 96dpi) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 1dppx) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min--moz-device-pixel-ratio: 1) and (min-width: 0\0), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 96dpi) and (min-width: 0\0) {
+  #zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-device-width: 319px) and (max-device-width: 765px) and (orientation: landscape) {
+  #zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item {
+    -webkit-column-break-inside: avoid;
+            break-inside: avoid-column;
+    page-break-inside: avoid;
+    /* fix for Firefox */
+    -webkit-column-break-after: avoid-column;
+            break-after: avoid-column;
+    -webkit-column-break-before: avoid-column;
+            break-before: avoid-column;
+    display: block;
+    min-height: 19vh;
+    padding: calc(0.5em + ((100% - 6em) / 12 * 0.15));
+  }
+  @supports (-ms-ime-align: auto) {
+    #zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (min-device-width: 319px) and (max-device-width: 765px) and (orientation: landscape) and (min-width: 0\0) {
+  #zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item {
+    display: inline-block;
+    width: 100%;
   }
 }
 
@@ -10496,8 +10638,8 @@ body .conteneur .conteneur-flex #zone-3.type-page-pole {
     overflow: hidden;
   }
   #zone-1.type-page-pole aside.liste-formations-initiales ul.formations-initiales li span.illustration img {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
   }
   #zone-1.type-page-pole aside.liste-formations-initiales ul.formations-initiales li span.titre-fiche, #zone-1.type-page-pole aside.liste-formations-initiales ul.formations-initiales li span.complement {
     padding: calc(0.5em + ((100% - 6em) / 12 * 0.1));
@@ -10506,13 +10648,50 @@ body .conteneur .conteneur-flex #zone-3.type-page-pole {
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 96dpi) {
   #zone-1.type-page-pole aside.liste-formations-initiales ul.formations-initiales li span.illustration img {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    -webkit-transform: scale(2.1);
+            transform: scale(2.1);
   }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 96dpi) {
+  #zone-1.type-page-pole aside.liste-formations-initiales ul.formations-initiales li span.illustration img {
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+  }
+}
+
+#zone-1.type-page-pole aside.liste-formations-initiales ul.formations-initiales li span.titre-fiche, #zone-1.type-page-pole aside.liste-formations-initiales ul.formations-initiales li span.complement {
+  padding: calc(0.5em + ((100% - 6em) / 12 * 0.1));
 }
 
 #zone-1.type-page-pole aside.liste-formations-initiales ul.formations-initiales li a {
   display: block;
+}
+
+#zone-1.type-page-pole aside.liste-formations-initiales nav.pager {
+  -webkit-column-span: all;
+          column-span: all;
+}
+
+#zone-1.type-page-pole aside.liste-formations-initiales nav.pager::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#zone-1.type-page-pole aside.liste-formations-initiales nav.pager ul.pager__items {
+  width: calc(2em + ((100% - 6em) / 12 * 4));
+  margin: 0 auto;
+  padding: calc(0.5em + ((100% - 6em) / 12 * 0.1));
+}
+
+#zone-1.type-page-pole aside.liste-formations-initiales nav.pager ul.pager__items li {
+  display: block;
+  float: left;
+}
+
+#zone-1.type-page-pole aside.liste-formations-initiales nav.pager ul.pager__items li:last-child {
+  margin-right: 0;
 }
 
 /*######-------- ||| STYLE ||| --------######*/
@@ -10547,13 +10726,13 @@ ______________________________*/
                         font-family: $FontRaleway;*/
 }
 
-#zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item:hover:not(#edit-term-node-tid-depth-limited-All-wrapper) {
-  background: transparent url("../images/BG/BG_Filtres_Exposes.png") center -8.5em no-repeat;
+#zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item:hover:not(:first-child) {
+  background: transparent url("../images/BG/BG_Filtres_Exposes.png") center -7.5vw no-repeat;
   background-size: 60%;
   background-color: #911381;
 }
 
-#zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item:hover:not(#edit-term-node-tid-depth-limited-All-wrapper) label {
+#zone-1.type-page-pole aside.liste-formations-initiales .bef-exposed-form div.form-item:hover:not(:first-child) label {
   opacity: 0.45;
   /*0.6*/
   -moz-opacity: 0.45;
@@ -10627,13 +10806,26 @@ ______________________________*/
 #zone-1.type-page-pole aside.liste-formations-initiales ul.formations-initiales li span.complement {
   font-weight: initial;
   /*we revert back the inherited style*/
+  font-size: 0.875em;
+}
+
+@media screen and (min-device-width: 1200px), screen and (min-device-width: 1440px) and (-webkit-min-device-pixel-ratio: 1), screen and (min-device-width: 1440px) and (min-resolution: 1dppx), screen and (min-device-width: 1440px) and (min--moz-device-pixel-ratio: 1), screen and (min-device-width: 1440px) and (min-resolution: 96dpi), only screen and (min-device-width: 319px) and (max-device-width: 765px) and (orientation: landscape), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 96dpi), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 96dpi) {
+  #zone-1.type-page-pole aside.liste-formations-initiales ul.formations-initiales li span.complement {
+    font-size: 1.4375em;
+  }
 }
 
 #zone-1.type-page-pole aside.liste-formations-initiales ul.formations-initiales li a {
   color: #FBFBFB;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1.4375em;
+  font-size: 0.875em;
+}
+
+@media screen and (min-device-width: 1200px), screen and (min-device-width: 1440px) and (-webkit-min-device-pixel-ratio: 1), screen and (min-device-width: 1440px) and (min-resolution: 1dppx), screen and (min-device-width: 1440px) and (min--moz-device-pixel-ratio: 1), screen and (min-device-width: 1440px) and (min-resolution: 96dpi), only screen and (min-device-width: 319px) and (max-device-width: 765px) and (orientation: landscape), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (min-resolution: 96dpi), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 1dppx), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min--moz-device-pixel-ratio: 1), only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (min-resolution: 96dpi) {
+  #zone-1.type-page-pole aside.liste-formations-initiales ul.formations-initiales li a {
+    font-size: 1.4375em;
+  }
 }
 
 #zone-1.type-page-pole aside.liste-formations-initiales ul.formations-initiales li span.illustration > a {
