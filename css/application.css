@@ -1290,7 +1290,7 @@ body .conteneur #header .headHaut nav.menuOver {
 
 .site-name {
   clear: both;
-  background: #E30078;
+  background: #ADC91F;
   padding: calc(0.5em + ((100% - 6em) / 12 * 0.01)) 0 0 calc(0.5em + ((100% - 6em) / 12 * 0.1));
   padding: 0;
   margin: 0;
@@ -3012,17 +3012,17 @@ body .conteneur .acces_rubriques aside.liste-acces-contact ul li span.titre-admi
 }
 
 body .conteneur .acces_rubriques aside.liste-acces-contact ul li.nid-23 a:hover {
-  background: #911381 url("../images/SVG/bg_acces_contact_blanc_transp.svg") -9% 58% no-repeat;
+  background: #911381 url("../images/SVG/bg_acces_contact_blanc_transp.svg") -9% 50% no-repeat;
   background-size: 400%;
 }
 
 body .conteneur .acces_rubriques aside.liste-acces-contact ul li.nid-21 a:hover {
-  background: #911381 url("../images/SVG/bg_acces_contact_blanc_transp.svg") 71% 58% no-repeat;
+  background: #911381 url("../images/SVG/bg_acces_contact_blanc_transp.svg") 80% 50% no-repeat;
   background-size: 400%;
 }
 
 body .conteneur .acces_rubriques aside.liste-acces-contact ul li.nid-39 a:hover {
-  background: #911381 url("../images/SVG/bg_acces_contact_blanc_transp.svg") 108% 58% no-repeat;
+  background: #911381 url("../images/SVG/bg_acces_contact_blanc_transp.svg") 110% 50% no-repeat;
   background-size: 400%;
 }
 
@@ -9197,17 +9197,17 @@ body .conteneur .acces_rubriques aside.liste-acces-contact ul li span.titre-admi
 }
 
 body .conteneur .acces_rubriques aside.liste-acces-contact ul li.nid-23 a:hover {
-  background: #911381 url("../images/SVG/bg_acces_contact_blanc_transp.svg") -9% 58% no-repeat;
+  background: #911381 url("../images/SVG/bg_acces_contact_blanc_transp.svg") -9% 50% no-repeat;
   background-size: 400%;
 }
 
 body .conteneur .acces_rubriques aside.liste-acces-contact ul li.nid-21 a:hover {
-  background: #911381 url("../images/SVG/bg_acces_contact_blanc_transp.svg") 71% 58% no-repeat;
+  background: #911381 url("../images/SVG/bg_acces_contact_blanc_transp.svg") 80% 50% no-repeat;
   background-size: 400%;
 }
 
 body .conteneur .acces_rubriques aside.liste-acces-contact ul li.nid-39 a:hover {
-  background: #911381 url("../images/SVG/bg_acces_contact_blanc_transp.svg") 108% 58% no-repeat;
+  background: #911381 url("../images/SVG/bg_acces_contact_blanc_transp.svg") 110% 50% no-repeat;
   background-size: 400%;
 }
 
