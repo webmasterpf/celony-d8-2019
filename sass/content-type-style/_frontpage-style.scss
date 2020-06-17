@@ -12,6 +12,20 @@
 //@include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){}
 
 /*######-------- ||| LAYOUT SPECIFIQUE ||| --------######*/
+//Splash avec colorbox - hors body 
+div#colorbox{
+  iframe.cboxIframe{
+    h2{
+      @include font-size(l); //utilisation de typey
+      color: $violet;
+    }
+    p{
+      @include font-size(m); //utilisation de typey
+      padding: em(5px);
+      line-height: 1.5em;
+    }
+  }
+}
 .annonce_2{
 
     ul.badnews{
