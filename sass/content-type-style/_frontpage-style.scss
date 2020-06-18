@@ -348,6 +348,7 @@ body .conteneur {
             a{
                 //                padding: 0 0 0 span(0.1);
                 display: block;
+                z-index: 60; //Résoudre pb lien sur images
             }
             .bx-caption{
                 span{
