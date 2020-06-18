@@ -207,7 +207,7 @@ gulp.task('drush', function() {
 
 //Vidage de cache Drupal avec child_process - 2020-06
 gulp.task('drush-cp', function(done) {
-  return cp.spawn('drush @vmdevd8ce', ['cache-rebuild'], {stdio: 'inherit'})
+  return cp.spawn('drush', ['cache-rebuild'], {stdio: 'inherit'})
   .on('close', done)
 /*   .pipe(plugins.notify({
     title: "Vidage de Cache avec Drush",
