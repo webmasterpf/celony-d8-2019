@@ -1940,7 +1940,8 @@ body .conteneur .HPDiapo a {
   text-decoration: none; }
 
 body .conteneur .HPDiapo .bxslider-hp a {
-  display: block; }
+  display: block;
+  z-index: 60; }
 
 body .conteneur .HPDiapo .bxslider-hp .bx-caption span {
   color: #606070; }
@@ -6227,7 +6228,8 @@ body .conteneur .HPDiapo a {
   text-decoration: none; }
 
 body .conteneur .HPDiapo .bxslider-hp a {
-  display: block; }
+  display: block;
+  z-index: 60; }
 
 body .conteneur .HPDiapo .bxslider-hp .bx-caption span {
   color: #606070; }
