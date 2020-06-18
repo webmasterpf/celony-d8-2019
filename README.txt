@@ -53,6 +53,15 @@ GIT
 Pour compilation locale utiliser Git pour synchroniser LAMP et machine locale.
 Automatisation via un hook dans le dossier du dépôt local sur le LAMP - Ajuster les réglages pour post-update
 
+COMPILATION LOCALE
+--------------------------
+dans package.json ajouter une tâche à lancer avec node-sass:
+"sass": "node-sass -w sass/ -o css/"
+
+puis dans un terminal Bash, lancer npm run sass qui va compiler et surveiller les fichiers scss
+=> changed: J:\DD1\Dev-Local-Dell\theme\sass\application.scss
+Rendering Complete, saving .css file...
+Wrote CSS to J:\DD1\Dev-Local-Dell\theme\css\application.css
 
 REGLAGES A FAIRE
 ----------------
