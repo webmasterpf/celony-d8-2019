@@ -51,7 +51,7 @@ BROWSER SYNC
 GIT
 -----------------
 Pour compilation locale utiliser Git pour synchroniser LAMP et machine locale.
-Automatisation via un hook dans le dossier du dépôt local sur le LAMP - Ajuster les réglages pour post-update
+githook coté client pas finalisé
 
 COMPILATION LOCALE
 --------------------------
