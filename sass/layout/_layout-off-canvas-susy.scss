@@ -28,7 +28,7 @@ body .conteneur {
         margin-left: span(1 wide);//push;
     }
     .close{
-        background: $rose-fushia;//changer couleur selon le site !!!
+        background: $vert;//changer couleur selon le site !!!
         @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
         //Hauteur de la zone contenant le bouton de fermeture de l'onglet
         padding: span(0.27);
@@ -39,7 +39,7 @@ body .conteneur {
         cursor: pointer;
         zoom: 1.5;
         margin: 0 0 0 80%;
-        background: $rose-fushia;//changer couleur selon le site !!!
+        background: $vert;//changer couleur selon le site !!!
         @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)){
           //Taille de la croix pour fermer le volet
         margin: 5% 0 0 10%;
@@ -86,7 +86,7 @@ body .conteneur {
             bottom: 0;
             height: $off-canvas-height;//limite la hauteur du bloc
             @include arrondis;
-            background: $rose-fushia; //changer couleur selon le site !!!
+            background: $vert; //changer couleur selon le site !!!
         }
         img.close-btn{
                 margin: 0 0 0 1%;
