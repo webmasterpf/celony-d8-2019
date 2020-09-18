@@ -1,0 +1,36 @@
+{
+  "name": "celony-d8-2019_delldg",
+  "version": "1.0.0",
+  "description": "Pour compilation locale sur Dell XPS DG",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w sass/ -o css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webmasterpf/celony-d8-2019.git"
+  },
+  "keywords": [
+    "d8",
+    "localecompildg"
+  ],
+  "author": "WPF-DG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webmasterpf/celony-d8-2019/issues"
+  },
+  "homepage": "https://github.com/webmasterpf/celony-d8-2019#readme",
+  "devDependencies": {
+    "breakpoint": "^0.1.6",
+    "breakpoint-sass": "^2.7.1",
+    "browser-sync": "^2.26.7",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^2.0.3",
+    "gulp-plumber": "^1.2.1",
+    "node-normalize-scss": "^8.0.1",
+    "node-sass": "^4.14.1",
+    "susy": "^3.0.5",
+    "typey": "^1.1.2"
+  }
+}
