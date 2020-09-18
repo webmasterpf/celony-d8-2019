@@ -215,26 +215,7 @@ function celony_d8_2019_theme_suggestions_block_alter(array &$suggestions, array
 */
 function celony_d8_2019_preprocess_file_link(&$variables) {
   // Add target _blank attribute to all file links.
-  $file = $variables['file'];
-  $url = file_create_url($file->uri->value);
-  // Use the description as the link text if available.
-  if (empty($variables['description'])) {
-    $link_text = $file->filename->value;
-  }
-  else {
-    $link_text = $variables['description']->__toString();
-  }
-  $link = '<a href="'.$url.'" type="'.$file->filemime->value . '" length="' . $file->filesize->value . '" title="' . \Drupal\Component\Utility\Html::escape($file->filename->value) . '" target="_blank">' . \Drupal\Component\Utility\Html::escape($link_text) . '</a>';
-  $variables['link']->setGeneratedLink($link);
-
-  //Autre possibilité - https://www.drupal.org/forum/support/module-development-and-code-questions/2018-08-07/drupal-8-file-field-target-_blank#comment-12725212
-  if($variables['link'] && $variables['link'] instanceof \Drupal\Core\GeneratedLink){
-  $doc = new DOMDocument();
-  $doc->loadHTML($variables['link']->getGeneratedLink());
-  $node = $doc->getElementsByTagName('a')[0];
-  $node->setAttribute('target', '_blank');
-  $variables['link']->setGeneratedLink($doc->saveHTML());
-}
+  //Code remplacé par le module https://www.drupal.org/project/issues/file_download_link
 }
 /**
 *  Pour la page de résultats avec custom search module.
