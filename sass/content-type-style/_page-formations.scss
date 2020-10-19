@@ -18,8 +18,8 @@ body .conteneur .conteneur-flex{
     #zone-1.type-page-pole{order:1;}
     #zone-2.type-page-pole{order:2;}
     #zone-3.type-page-pole{order:3;}
-    #zone-4.type-page-pole{}
-    #zone-5.type-page-pole{}
+    #zone-4.type-page-pole{order:4;}
+    #zone-5.type-page-pole{order:5;}
     @include breakpoint ($desktop){}
 }
 
@@ -170,7 +170,12 @@ body .conteneur{
                   span.titre-fiche, span.complement{
                       padding: span(0.1);
                   }
-                  span.complement{}
+                  span.modalite-alternance{
+                    //classe ajoutée dans la vue - réécriture du champ
+                    border: em(1px) dashed;//couleur héritée du LI parent
+                    margin: span(0.1);
+                    text-align: center;
+                  }
               }
               @include breakpoint(($tabletlandscape)){
                 span.illustration {
