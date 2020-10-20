@@ -205,7 +205,18 @@ ul.rubriques-speciales{
             width: 75%;
         }
     }
-
+    aside.pageFacebook{
+      //Likebox FB classe via BlockClass
+      @include breakpoint(($desktop,$desktopwide,
+      $tablet-hd,$tabletlandscape-hd
+      )){
+      max-width: span(11);
+      margin: span(0.5)  span(4);
+    }
+    @include breakpoint($tablet){}
+    @include breakpoint(($mobilelandscape,$tabletlandscape)){}
+    }
+//Bloc de partage RS avec social simple. Voir scss dédié _layout-partage-rs
 /*######-------- ||| STYLE ||| --------######*/
 
 //Code imbriqué à 100%
@@ -435,6 +446,7 @@ body .conteneur {
                 span.titre-admin{
                     display: block;
                     text-align:center;
+                    font-weight: bold;
                     a{
                         color: whitesmoke;
                         text-decoration: none;
@@ -519,6 +531,9 @@ body .conteneur {
                     list-style: none;
                     width: 95%;
                     margin: 0 0 span(0.2) span(0.2);
+                    // Pas de param display:flex pour mobile sinon bug affichage
+                    display: block;
+
 
                     @include breakpoint(($desktop,$desktopwide,$mobilelandscape,
                     $tablet,$tabletlandscape,$tablet-hd,$tabletlandscape-hd)){
@@ -528,9 +543,11 @@ body .conteneur {
                         @include hack-IE;
                         margin: 0;
                         padding: 0 span(0.9);
+                        display: flex;//Résoud bug FF
                     }
                     @include breakpoint(($tablet,$tabletlandscape,$tablet-hd,$tabletlandscape-hd)){
                         padding: span(0.9);
+                        display: flex;//Résoud bug FF
                     }
                     span.titre-admin{
                         display: block;
