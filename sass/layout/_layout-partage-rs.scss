@@ -56,8 +56,8 @@ body .conteneur {
 // Fin .conteneur
 /*######-------- ||| STYLE ||| --------######*/
 //Boucle pour englober tous les TdC concernés
-$typedecontenu: type-contenu-vdl, type-contenu-sortie-action, type-contenu-projet, type-contenu-mini-stage, type-contenu-innovation, type-contenu-intervenants, type-contenu-entreprise, type-contenu-actualites,
-type-contenu-admin ,type-fiche-formation, type-page-lycee;
+$typedecontenu: type-contenu-vdl, type-page-sorties-actions, type-contenu-actualites,
+type-page-partenaires, type-page-europe,type-fiche-formation, type-page-lycee;
 $zones: zone-1, zone-2, zone-3;
 @each $zone in $zones {
   @each $type in $typedecontenu {
