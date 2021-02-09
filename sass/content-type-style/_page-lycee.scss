@@ -96,7 +96,7 @@ $zones: zone-1, zone-2, zone-3;
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             padding: span(0.2);
         }
-        table,tbody,tr,td,form,input[type="text"],input[type="email"],select{
+        table,tbody,tr,td,form,input[type="text"],input[type="email"],input[type="tel"],select{
             width: 95%;
             margin: 0 auto;
             @include arrondis(1.5em);
@@ -215,8 +215,11 @@ h1.titre_page {
         ¤¤¤ STYLES PROPRES ¤¤¤
 ______________________________*/
 
-#zone-1.type-contenu-cdi,
-#zone-1.type-page-lycee {
+$typedecontenu: type-page-lycee,type-contenu-cdi;
+$zonesimg: zone-illustration;
+@each $zone in $zonesimg {
+  @each $type in $typedecontenu {
+    ##{$zone}.#{$type} {
   h2 {}
 
   h3 {}
@@ -303,7 +306,7 @@ ______________________________*/
       height: 0;
       overflow: initial;
     }
-
+}
     iframe,
     object {
       border: em(2px) solid $violet;
@@ -317,10 +320,10 @@ ______________________________*/
         width: 100%;
         height: 100%;
       }
+    }
 aside.formulaire{
   //Style pour formulaire
-   
-      input[type="text"],input[type="email"],textarea,input[type="tel"]{
+     input[type="text"],input[type="email"],textarea,input[type="tel"]{
           background: $vert; // Couleur fond des champs
           color: $blanc-casse;
           padding: span(0.01);
@@ -343,7 +346,7 @@ aside.formulaire{
       color: $bleu-turquoise;
     }
   }
-}
+} // Fin zone-1 type-page-lycee
 /*######-------- ZONE 2 --------######*/
 #zone-2.type-contenu-cdi,
 #zone-2.type-page-lycee {
