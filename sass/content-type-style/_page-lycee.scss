@@ -216,8 +216,8 @@ h1.titre_page {
 ______________________________*/
 
 $typedecontenu: type-page-lycee,type-contenu-cdi;
-$zonesimg: zone-illustration;
-@each $zone in $zonesimg {
+$zones: zone-1, zone-2, zone-3;
+@each $zone in $zones {
   @each $type in $typedecontenu {
     ##{$zone}.#{$type} {
   h2 {}
@@ -294,7 +294,7 @@ $zonesimg: zone-illustration;
         max-height: 100%;
       }
     }
-  }
+
 
   #video_lycee {
     width: 95%;
@@ -307,20 +307,7 @@ $zonesimg: zone-illustration;
       overflow: initial;
     }
 }
-    iframe,
-    object {
-      border: em(2px) solid $violet;
-      padding: em(1px);
-      @include img-centered;
-      max-width: 95%;
-      @include breakpoint ($desktop) {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-    }
+} // Fin content
 aside.formulaire{
   //Style pour formulaire
      input[type="text"],input[type="email"],textarea,input[type="tel"]{
