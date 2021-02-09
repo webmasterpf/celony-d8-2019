@@ -103,15 +103,30 @@ $zones: zone-1, zone-2, zone-3;
             @include backgroundImage(("motif_img_overlay.png"),transparent,repeat, top left);
             @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
                 width: 75%;
-                margin: span(0.1) auto; 
+                margin: span(0.1) auto;
                 padding: span(0.1);
 
-            }
-        }
-        textarea{
-            @include arrondis(1em);
-        }
-    }// Fin formulaire
+              }
+          }
+          textarea{
+              @include arrondis(1em);
+          }
+          div.webform-element-description{
+            //Texte d'aide pour les champs
+            @include font-size(s); //utilisation de typey
+          }
+          //Selecteur de temps: date/heure
+          td.webform-multiple-table--handle{
+            width: 10%;
+          }
+          div[class^='edit-creneau-horaire'][class$='time'],
+          div[id^='edit-creneau-horaire'][id$='time'],
+          input[id^='edit-creneau-horaire'][id*='time']{
+            //Cible les IDs démarrant et se terminant par le texte indiqué, ou qui contient le texte
+            width: 50%;
+          }
+
+      }// aside.formulaire
     }
   }
 }
@@ -139,6 +154,10 @@ h1.titre-lycee {
 
 h1.titre_overlay {
   @include titre_overlay();
+  @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+  top: em(7px);
+  left:em(5px);
+  }
 }
 
 h1.titre_page {
@@ -188,15 +207,7 @@ h1.titre_page {
       strong {
         color: $vert;
       }
-      //Style pour formulaire
-       aside.formulaire{
 
-        input[type="text"],input[type="email"],textarea{
-            background: $vert;
-            color: $blanc-casse;
-            padding: span(0.01);
-        }
-    }
     }
   }
 }
@@ -306,6 +317,30 @@ ______________________________*/
         width: 100%;
         height: 100%;
       }
+aside.formulaire{
+  //Style pour formulaire
+   
+      input[type="text"],input[type="email"],textarea,input[type="tel"]{
+          background: $vert; // Couleur fond des champs
+          color: $blanc-casse;
+          padding: span(0.01);
+      }
+  }// Fin aside.formulaire
+} // Fin ##{$zone}.#{$type}
+}// Fin @each $type in $typedecontenu
+} // Fin @each $zone in $zones
+#zone-1.type-page-lycee{
+  div.cartouche{
+    //Cartouche pour texte avec style différent ex: page JPO
+    background: $gris-clair;
+    border-style: dashed none;
+    border-color: $rose-fushia;
+    border-width: em(2px);
+    em {//texte italique
+      color: $gris-anthracite;
+    }
+    strong {
+      color: $bleu-turquoise;
     }
   }
 }
@@ -463,7 +498,7 @@ ______________________________*/
       padding: span(0.02);
       margin: 0 0 0 span(0.2);
     }
-    
+
   }
 }
 /*######-------- ZONE 3 --------######*/
