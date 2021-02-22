@@ -185,8 +185,11 @@ $zones: zone-1, zone-2, zone-3;
           div[class^='edit-creneau-horaire'][class$='time'],
           div[id^='edit-creneau-horaire'][id$='time'],
           input[id^='edit-creneau-horaire'][id*='time'],
-          input[id^='edit-creneau-horaire'][id*='date']{
-            //Cible les IDs démarrant et se terminant par le texte indiqué, ou qui contient le texte
+          input[id^='edit-creneau-horaire'][id*='date'],
+          input[id^='edit-creneau-horaire'][id$='date'].form-text,
+          input[id^='edit-creneau-horaire'][id$='date']{
+//https://www.antimath.info/css/css-target-elements-by-partial-class-or-id-name/
+//Cible les IDs démarrant et se terminant par le texte indiqué (^ ou $), ou qui contient le texte (*)
             width: 50%;
           }
 
