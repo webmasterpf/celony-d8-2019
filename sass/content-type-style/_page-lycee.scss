@@ -163,11 +163,11 @@ $zones: zone-1, zone-2, zone-3;
           width: 95%;
           margin: 0 auto;
           @include arrondis(1.5em);
-          
+
           @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
               width: 75%;
               margin: span(0.1) auto;
-              padding:0; //Corrige mauvais affichage sur bureau
+              padding: em(5px) 0 em(5px) em(50px); //Corrige mauvais affichage sur bureau
 
             }
         }
@@ -184,7 +184,8 @@ $zones: zone-1, zone-2, zone-3;
           }
           div[class^='edit-creneau-horaire'][class$='time'],
           div[id^='edit-creneau-horaire'][id$='time'],
-          input[id^='edit-creneau-horaire'][id*='time']{
+          input[id^='edit-creneau-horaire'][id*='time'],
+          input[id^='edit-creneau-horaire'][id*='date']{
             //Cible les IDs démarrant et se terminant par le texte indiqué, ou qui contient le texte
             width: 50%;
           }
