@@ -148,7 +148,6 @@ $zones: zone-1, zone-2, zone-3;
             padding: span(0.2);
         }
         table,tbody,tr,td,form,input[type="text"],input[type="email"],select{
-          //input[type="tel"]
             width: 95%;
             margin: 0 auto;
             @include arrondis(1.5em);
@@ -160,6 +159,18 @@ $zones: zone-1, zone-2, zone-3;
 
               }
           }
+        input[type="tel"]{
+          width: 95%;
+          margin: 0 auto;
+          @include arrondis(1.5em);
+          
+          @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+              width: 75%;
+              margin: span(0.1) auto;
+              padding:0; //Corrige mauvais affichage sur bureau
+
+            }
+        }
           textarea{
               @include arrondis(1em);
           }
@@ -363,7 +374,7 @@ $zones: zone-1, zone-2, zone-3;
 } // Fin content
 aside.formulaire{
   //Style pour formulaire
-     input[type="text"],input[type="email"],textarea,input[type="tel"]{
+     textarea,input[type="text"],input[type="email"],input[type="tel"]{
           background: $vert; // Couleur fond des champs
           color: $blanc-casse;
 
