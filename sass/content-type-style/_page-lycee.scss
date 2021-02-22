@@ -366,8 +366,12 @@ aside.formulaire{
      input[type="text"],input[type="email"],textarea,input[type="tel"]{
           background: $vert; // Couleur fond des champs
           color: $blanc-casse;
-          padding: span(0.01);
+
       }
+      input:not([type='tel']) {
+      // Pas de padding:  pour le champ telephone
+    padding: span(0.01);
+  }
   }// Fin aside.formulaire
 } // Fin ##{$zone}.#{$type}
 }// Fin @each $type in $typedecontenu
