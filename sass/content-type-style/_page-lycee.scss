@@ -77,14 +77,65 @@ $zonesimg: zone-illustration;
           min-height: 25vw;
           max-height: 30vw;
 
-          img {
-            transform: translate(0%,-6%);
+          img:not([src*="defaut"]) {
+            transform: translate(0%,-9%);
           }
+          img[src*="defaut"]{//Position du visuel par défaut
+            transform: translate(0%,-10%);
+          }
+        }
+        @include breakpoint(($tablet)) {
+          min-height: 25vw;
+          max-height: 30vw;
+
+          img:not([src*="defaut"]) {
+            transform: translate(0%,-25%);
+          }
+          img[src*="defaut"]{//Position du visuel par défaut
+            transform: translate(0%,-24%);
+          }
+        }
+        @include breakpoint(($tabletlandscape)) {
+          min-height: 25vw;
+          max-height: 30vw;
+
+          img:not([src*="defaut"]) {
+            transform: translate(0%,-20%);
+          }
+          img[src*="defaut"]{//Position du visuel par défaut
+            transform: translate(0%,-18%);
+          }
+        }
+        @include breakpoint(($mobilelandscape)) {
+          min-height: 25vw;
+          max-height: 35vw;
+
+          img:not([src*="defaut"]) {
+            transform: translate(0%,-30%);
+          }
+          img[src*="defaut"]{//Position du visuel par défaut
+            transform: translate(0%,-20%);
+          }
+        }
+      }//Fin illustration-pleinepage
+    }
+  }
+}// Fin zone-illustration
+
+//Position du visuel différente selon NiD
+#node-XX{
+  #zone-illustration.type-page-lycee{
+      // utiliser bxslider-cyrano.scss" pour régler le bx-viewport ou bx-caption
+      #illustration-pleinepage{
+        @include breakpoint(($desktop,$desktopwide)){
+            img{
+                transform: translate(0%, -53%);
+            }
         }
       }
     }
   }
-}
+
 
 $typedecontenu: type-page-lycee,type-contenu-cdi;
 $zones: zone-1, zone-2, zone-3;
@@ -96,7 +147,8 @@ $zones: zone-1, zone-2, zone-3;
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             padding: span(0.2);
         }
-        table,tbody,tr,td,form,input[type="text"],input[type="email"],input[type="tel"],select{
+        table,tbody,tr,td,form,input[type="text"],input[type="email"],select{
+          //input[type="tel"]
             width: 95%;
             margin: 0 auto;
             @include arrondis(1.5em);
@@ -244,6 +296,7 @@ $zones: zone-1, zone-2, zone-3;
   }
 
   div.content {
+    padding: span(0.2);
     .entrefilet {
       @include backgroundImage('bg-merci.gif');
       display: block;
@@ -458,6 +511,11 @@ aside.formulaire{
           transition: 0.5s all;
           display: inline-block;
           transform: scale(1);
+          min-height: em(30px);
+          @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)) {
+            // Pour ne pas tronquer le picto
+            min-height: em(33px);
+          }
         }
       }
 
@@ -478,6 +536,11 @@ aside.formulaire{
           transition: 0.5s all;
           display: inline-block;
           transform: scale(1);
+          min-height: em(30px);
+          @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)) {
+            // Pour ne pas tronquer le picto
+            min-height: em(33px);
+          }
         }
       }
     }
