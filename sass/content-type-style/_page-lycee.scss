@@ -391,8 +391,8 @@ aside.formulaire{
           color: $blanc-casse;
 
       }
-      input:not([type='tel']) {
-      // Pas de padding:  pour le champ telephone
+      input:not([type='tel']):not([type='image']) {
+      // Pas de padding:  pour le champ telephone ni pictos horaire
     padding: span(0.01);
   }
   }// Fin aside.formulaire
