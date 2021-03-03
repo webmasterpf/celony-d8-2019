@@ -147,7 +147,7 @@ $zones: zone-1, zone-2, zone-3;
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             padding: span(0.2);
         }
-        table,tbody,tr,td,form,input[type="text"],input[type="email"],select{
+        table,tbody,tr,td,form,input[type="text"],input[type="email"],select, textarea{
             width: 95%;
             margin: 0 auto;
             @include arrondis(1.5em);
@@ -159,7 +159,7 @@ $zones: zone-1, zone-2, zone-3;
 
               }
           }
-        input[type="tel"]{
+        input[type="tel"]:not([type="image"]){
           width: 95%;
           margin: 0 auto;
           @include arrondis(1.5em);
@@ -191,6 +191,14 @@ $zones: zone-1, zone-2, zone-3;
 //https://www.antimath.info/css/css-target-elements-by-partial-class-or-id-name/
 //Cible les IDs démarrant et se terminant par le texte indiqué (^ ou $), ou qui contient le texte (*)
             width: 50%;
+          }
+          .select2-selection__choice{
+            width: 88%;
+            @include font-size(s); //utilisation de typey
+@include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
+  width: auto;
+  @include font-size(m); //utilisation de typey
+}
           }
 
       }// aside.formulaire
