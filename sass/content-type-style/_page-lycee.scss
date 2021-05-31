@@ -532,9 +532,9 @@ aside.formulaire{
           background-size: contain;
           content: "";
           position: relative;
-          vertical-align: sub;
-          padding: em(10px);
-          margin: em(3px);
+          vertical-align: middle;
+          padding: em(13px);
+          margin: em(3px) em(10px) em(3px) 0;
           transition: 0.5s all;
           display: inline-block;
           transform: scale(1);
@@ -557,9 +557,9 @@ aside.formulaire{
           background-size: contain;
           content: "";
           position: relative;
-          vertical-align: sub;
-          padding: em(10px);
-          margin: em(3px);
+          vertical-align: middle;
+          padding: em(13px);
+          margin: em(3px) em(10px) em(3px) 0;
           transition: 0.5s all;
           display: inline-block;
           transform: scale(1);
