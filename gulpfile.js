@@ -81,7 +81,7 @@ var gutil = require('gulp-util');
 var gcache = require('gulp-cache');
 var git = require('gulp-git');
 var sassIncl = require('sass-include-paths');
-var sass = require('gulp-sass')(require('sass'));
+
 
 //Plugins de PostCSS
 var autoprefixer = require('autoprefixer');
