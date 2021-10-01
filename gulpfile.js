@@ -12,10 +12,10 @@ var basePaths = {
     dest:  './css/', // dossier à livrer
     tpl: '**/*.tpl.php',
     node_modules: './node_modules/',
-    gems:'/home/webmaster/vendor/bundle/gems/',
-    drushscript:'/home/webmaster/.config/composer/vendor/drush/drush/drush.php',
-    drushd6aliasfile:'/home/webmaster/.drush/sitesvmd6.aliases.drushrc.php',
-    drushd8aliasfile:'/home/webmaster/.drush/sitesvmd8.aliases.drushrc.php'
+    gems:'~/vendor/bundle/gems/',
+    drushscript:'~/.config/composer/vendor/drush/drush/drush.php',
+    drushd6aliasfile:'~/.drush/sitesvmd6.aliases.drushrc.php',
+    drushd8aliasfile:'~/.drush/sitesvmd8.aliases.drushrc.php'
 };
 
 //Chemins spécifiques
@@ -58,7 +58,8 @@ var assetsPath = {
     node_modules: [
         //Ajoutés avec les gems pour simplifier
         basePaths.node_modules + 'node-normalize-scss',
-        basePaths.node_modules + 'susy/sass',
+        basePaths.node_modules + 'scss-resets/resets/_normalize.scss',
+        //basePaths.node_modules + 'susy/sass',
         basePaths.node_modules + 'typey/stylesheets/_typey.scss'
     ],
     javascript: [
@@ -79,6 +80,8 @@ var plugins = require('gulp-load-plugins')();
 var gutil = require('gulp-util');
 var gcache = require('gulp-cache');
 var git = require('gulp-git');
+var sassIncl = require('sass-include-paths');
+var sass = require('gulp-sass')(require('sass'));
 
 //Plugins de PostCSS
 var autoprefixer = require('autoprefixer');
@@ -86,7 +89,18 @@ var autoprefixer = require('autoprefixer');
 //Composants NodeJS
 var cp = require('child_process');
 
-
+// Inclusion des chemins vers SCSS de modules NPMs avec IncludePaths
+// Réglage pour compilation sur serveur de DEV AD
+var inclureScss = [].concat(
+                //assetsPath.gems,
+                assetsPath.node_modules,
+                folderPaths.styles.src
+              )
+// LE tableau est créé par la commande sassc $(sassIncludePaths --sassc --node_modules) [...]
+/*var inclureScss = [] // additional include paths
+.concat(sassIncl.nodeModulesSync())
+.concat(sassIncl.rubyGemsSync())
+.concat(sassIncl.rubyGemsBundleSync());*/
 
 // Autoprefixer : Navigateurs à cibler pour le préfixage CSS
 // Liste fourni depuis 06/19 par .browserslistrc - Editer pour modifier.
@@ -136,8 +150,10 @@ var processors = [
 //}
 
 //Variables spécifiques au thèmes
-var urlSite = ['http://d8-celony.vmdev/'];
-var aliasDrush = ['@vmdevd8mg'];
+//var urlSite = ['http://d8-brise-lames.vmdev/'];
+// Pour DEV sur hébergement
+var urlSite = ['https://d8er-pfdev.provence-formation.fr/'];
+var aliasDrush = ['@vmdevd8er'];
 // #############################
 // Tâches à accomplir - Tasks
 // #############################
@@ -169,11 +185,7 @@ gulp.task('sasscompil', function () {
             errLogToConsole: true,
             sourceComments: 'normal',
             debugInfo: true,
-            includePaths: [].concat(
-                assetsPath.gems,
-                assetsPath.node_modules,
-                folderPaths.styles.src
-            )
+            includePaths: inclureScss,
         }).on('error', plugins.sass.logError))
         .pipe(postcss(processors))//Utilisation des plugins de PostCSS dont Autoprefixer (Voir plus haut)
         .pipe(plugins.sourcemaps.write('.', { sourceRoot: folderPaths.styles.src }))//Pour créer le fichier css.map à coté du css
@@ -194,10 +206,10 @@ gulp.task('drush', function() {
       read: false
     })
 
-    .pipe(plugins.shell([
-      'drush @vmdevd6pf cron && drush @vmdevd6pf cc all'
+    plugins.shell.task(
+      'drush @vmdevd8mg cron && drush @vmdevd8mg cr'
 
-    ]))
+    )
     .pipe(plugins.notify({
       title: "Vidage de Cache avec Drush",
       message: "Cache Drupal vidé complètement.",
@@ -209,16 +221,16 @@ gulp.task('drush', function() {
 gulp.task('drush-cp', function(done) {
   return cp.spawn('drush', ['cache-rebuild'], {stdio: 'inherit'})
   .on('close', done)
-/*   .pipe(plugins.notify({
+   /*  .pipe(plugins.notify({
     title: "Vidage de Cache avec Drush",
     message: "Cache Drupal vidé complètement.",
     onLast: true
-  }));  */
+  })); */
   ;
 });
 
-// Run git pull from multiple branches
-gulp.task('pull', function () {
+// Run git pull from multiple branches - 2020-08
+gulp.task('majgitpull', function () {
     git.pull('origin', ['master', 'developpement', 'retroportage'], function (err) {
         if (err) throw err;
     });
@@ -229,8 +241,11 @@ gulp.task('browser-sync', function() {
 browserSync.init({
         //changer l'adresse du site pour lequel utiliser browserSync, solution par variable fonctionne pas
 //        proxy: '.urlSite.',
-        proxy: 'http://d8-celony.vmdev/',
-        open: false,
+        //proxy: 'http://d8-rostand.vmdev/',
+        proxy: 'https://d8er-pfdev.provence-formation.fr/',
+        host: 'd8er-pfdev.provence-formation.fr',
+        open: 'external',
+        //open: false,
         logLevel: 'info',//pour avoir toutes les infos ,utiliser "debug", pour infos de base "info"
         logConnections: true
     });
@@ -254,7 +269,8 @@ gulp.task('clearCache', function (done) {
 gulp.task('default', ['browser-sync'], function () {
     //gulp.task('default', function(){
     gulp.watch(basePaths.src, ['sasscompil']);
-    //gulp.watch(basePaths.project, ['clearCache']);
+    gulp.watch(folderPaths.styles.dest, ['drush-cp']);
+
     //gulp.watch(folderPaths.templates.d8nodestpl,['clearCache'],bs_reload);
     gulp.watch(folderPaths.images.src, bs_reload);
     gulp.watch(folderPaths.images.dest, bs_reload);

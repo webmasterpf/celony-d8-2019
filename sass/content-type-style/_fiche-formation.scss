@@ -73,6 +73,15 @@ body .conteneur{
         width: span(2);
         margin: 0 auto span(0.1) auto;
 
+        @include breakpoint(($desktop, $desktopwide)) {
+            width: span(2);
+            margin: 0 auto span(0.1);
+        }
+
+        @include breakpoint(($mobilelandscape, $tablet, $tabletlandscape)) {
+            width: span(5);
+            margin: 0 auto span(0.1);
+        }
     }
     .content{
         column-count: inherit;
@@ -93,6 +102,11 @@ body .conteneur{
         @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)){
             width: span(7);
 
+        }
+
+        .label-field-lien-utile-ficheform {
+            //Besoin de simuler un br pour avoir un saut de ligne entre chaque éléments.HTML en liste plus efficace
+            @include clearfixsusy3;
         }
     }
 
@@ -135,6 +149,34 @@ body .conteneur{
             }
         }
 
+        li {
+            span {
+                a {
+                    &::before {
+                        @include breakpoint(($desktop, $desktopwide)) {
+                            height: 3.45vh; //Ajuster la hauteur selon taille du picto
+                        }
+
+                        @include breakpoint(($tabletlandscape)) {
+                            height: 3.1vh; //Ajuster la hauteur selon taille du picto
+                        }
+
+                        @include breakpoint(($tablet)) {
+                            height: 2.3vh; //Ajuster la hauteur selon taille du picto
+                        }
+
+                        @include breakpoint(($mobilelandscape)) {
+                            height: 3.7vh; //Ajuster la hauteur selon taille du picto
+                        }
+                    }
+                }
+            }
+        }
+
+        .label-field-lien-ficheform {
+            //Besoin de simuler un br pour avoir un saut de ligne entre chaque éléments.HTML en liste plus efficace
+            @include clearfixsusy3;
+        }
     }
 }
 
@@ -194,6 +236,8 @@ ______________________________*/
 #zone-1.type-page-fiche-formation{
     .complement-titre-fiche{
 
+        margin: 0 auto;
+        display: block;
 
         max-width: fit-content;
         *{
@@ -255,6 +299,11 @@ ______________________________*/
                     transition:0.5s all;
                     display: inline-block;
                     transform: scale(1);
+                    min-height: em(30px);
+                @include breakpoint(($desktop,$desktopwide,$mobilelandscape,$tablet,$tabletlandscape)) {
+                  // Pour ne pas tronquer le picto
+                  min-height: em(33px);
+                }
                 }
             }
             img.filefield-icon{
@@ -343,9 +392,33 @@ ______________________________*/
             }
         }
     }
+    .videos {
+      ul {
+        li{
+          list-style: none;
+        }
+
+      }
+
+      iframe {
+        @include breakpoint(($desktop,$desktopwide)) {
+          max-height: 90vh;
+          max-width: 60vw;
+          margin: 0 auto;
+          padding: span(0.02);
+          border: em(3px) solid $violet;
+        }
+        @include breakpoint(($mobilelandscape,$tablet,$tabletlandscape)) {
+          max-height: 90vh;
+          max-width: 90vw;
+          margin: 0 auto;
+          padding: span(0.02);
+          border: em(3px) solid $violet;
+        }
+      }
+    }
+}//.zone-3.type-fiche-formation
 
 
-
-}
 #zone-4.type-page-fiche-formation{}
 #zone-5.type-page-fiche-formation{}
